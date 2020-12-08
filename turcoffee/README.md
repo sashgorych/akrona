@@ -124,26 +124,33 @@
 ```    
 нище по коду буде ще кнопка 
  
-```<button class="make-order">Замовити</button>```
+```
+<button class="make-order">Замовити</button>
+```
 ---
 
 # Блок з кольором і вагою
 
 цей блок відповідає за різновиди кольору. в span в style треба закидувати колір товару
+
+
 ```
- <div class="item-kinds colors">
+<div class="item-kinds colors">
             <a href="#" class="state-active"><span style="background: #979A9A"></span></a>
             <a href="#" class="state-active"><span style="background: #979A9A"></span></a>
  </div>
- ```
+```
+ 
 цей блок відповідає за різновид по масі упакування      
-        ```
+
+```
         <div class="item-kinds weights">
             <a href="" class=""><span>0.1 кг</span></a>
             <a href="" class=""><span>0.25 кг</span></a>
             <a href="" class="state-active"><span>1 кг</span></a>
         </div>
-        ```
+```
+
 Ці два блоки можна відображати одночасно, css сховає лишнє
 
 ---
