@@ -6,7 +6,7 @@
     <div class="item-wr">
         <div class="stocks">
             <span>new</span>
-            <span>`Знижка`</span>
+            <span>Знижка</span>
         </div>
         <div class="set-favourite">
             <a href="" class=""></a>
@@ -67,3 +67,13 @@
     </div>
  </div>
 ```
+---
+#блок з акціями
+```
+<div class="stocks">
+            <span>new</span>
+            <span>Знижка</span>
+</div>
+```
+Сюди вставляються просто спани з текстом
+---
