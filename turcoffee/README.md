@@ -1,5 +1,8 @@
 # Айтем продукту
 стандартний айтем 
+
+
+
  <div class="item pr__origin">
     <div class="item-wr">
         <div class="stocks">
