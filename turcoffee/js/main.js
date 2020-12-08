@@ -141,105 +141,112 @@ function clearMobileSearchInput() {
 //search end ----------------------------------------
 
 //header scripts end -----------------------------------------------------------------------------
-$('.products-slider').slick({
-    slidesToShow: 5,
-    arrows: true,
-    slidesToScroll: 5,
-    responsive: [
-        {
-            breakpoint: 1366,
-            settings: {
-                slidesToShow: 4,
-                slidesToScroll: 4
+if(document.querySelector('.products-slider')) {
+    $('.products-slider').slick({
+        slidesToShow: 5,
+        arrows: true,
+        slidesToScroll: 5,
+        responsive: [
+            {
+                breakpoint: 1366,
+                settings: {
+                    slidesToShow: 4,
+                    slidesToScroll: 4
+                }
+            }, {
+                breakpoint: 1230,
+                settings: {
+                    slidesToShow: 4,
+                    slidesToScroll: 4
+                }
+            },
+            {
+                breakpoint: 1180,
+                settings: {
+                    slidesToShow: 3,
+                    slidesToScroll: 3
+                }
+            },
+            {
+                breakpoint: 730,
+                settings: {
+                    slidesToShow: 2,
+                    slidesToScroll: 2
+                }
+            },
+            {
+                breakpoint: 576,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1
+                }
             }
-        }, {
-            breakpoint: 1230,
-            settings: {
-                slidesToShow: 4,
-                slidesToScroll: 4
+        ]
+    });
+}
+if(document.querySelector('.beneficial-offers-slider')) {
+    $('.beneficial-offers-slider').slick({
+        slidesToShow: 4,
+        arrows: true,
+        slidesToScroll: 4,
+        responsive: [
+            {
+                breakpoint: 1366,
+                settings: {
+                    slidesToShow: 3,
+                    slidesToScroll: 3
+                }
+            }, {
+                breakpoint: 1230,
+                settings: {
+                    slidesToShow: 4,
+                    slidesToScroll: 4
+                }
+            },
+            {
+                breakpoint: 992,
+                settings: {
+                    slidesToShow: 3,
+                    slidesToScroll: 3
+                }
+            },
+            {
+                breakpoint: 730,
+                settings: {
+                    slidesToShow: 2,
+                    slidesToScroll: 2
+                }
+            },
+            {
+                breakpoint: 576,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1
+                }
             }
-        },
-        {
-            breakpoint: 1180,
-            settings: {
-                slidesToShow: 3,
-                slidesToScroll: 3
-            }
-        },
-        {
-            breakpoint: 730,
-            settings: {
-                slidesToShow: 2,
-                slidesToScroll: 2
-            }
-        },
-        {
-            breakpoint: 576,
-            settings: {
-                slidesToShow: 1,
-                slidesToScroll: 1
-            }
-        }
-    ]
-});
-$('.beneficial-offers-slider').slick({
-    slidesToShow: 4,
-    arrows: true,
-    slidesToScroll: 4,
-    responsive: [
-        {
-            breakpoint: 1366,
-            settings: {
-                slidesToShow: 3,
-                slidesToScroll: 3
-            }
-        }, {
-            breakpoint: 1230,
-            settings: {
-                slidesToShow: 4,
-                slidesToScroll: 4
-            }
-        },
-        {
-            breakpoint: 992,
-            settings: {
-                slidesToShow: 3,
-                slidesToScroll: 3
-            }
-        },
-        {
-            breakpoint: 730,
-            settings: {
-                slidesToShow: 2,
-                slidesToScroll: 2
-            }
-        },
-        {
-            breakpoint: 576,
-            settings: {
-                slidesToShow: 1,
-                slidesToScroll: 1
-            }
-        }
-    ]
-});
-$('.banner-slider-pc').slick({
-    dots: true,
-    arrows: true,
-    responsive: [
-        {
-            breakpoint: 1280,
-            settings: {
-                dots: false,
-                arrows: false
-            }
-        }]
-});
-$('.banner-slider-mobile').slick({
-    dots: true,
-    arrows: true
-});
-
+        ]
+    });
+}
+if(document.querySelector('.banner-slider-pc')) {
+    $('.banner-slider-pc').slick({
+        dots: true,
+        arrows: true,
+        responsive: [
+            {
+                breakpoint: 1280,
+                settings: {
+                    dots: false,
+                    arrows: false
+                }
+            }]
+    });
+}
+if(document.querySelector('.banner-slider-mobile')) {
+    $('.banner-slider-mobile').slick({
+        dots: true,
+        arrows: true
+    });
+}
 
 if (!isIE) {
 
