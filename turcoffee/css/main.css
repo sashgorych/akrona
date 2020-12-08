@@ -1655,6 +1655,8 @@ div[data-tippy-root] {
         height: auto;
         width: auto;
         max-width: 100%; }
+    .products-container .item .stocks span {
+      display: none; }
     .products-container .item .item-title {
       height: 53px;
       overflow: hidden; }
@@ -1934,6 +1936,10 @@ div[data-tippy-root] {
         left: 0;
         height: 1px;
         background: black; }
+    .products-container .item.discount .new-discount_text {
+      display: block !important; }
+    .products-container .item.pr_new .new-stock_text {
+      display: block !important; }
     .products-container .item.not-available .item-kinds.colors {
       margin-bottom: 11px;
       margin-top: 9px; }
@@ -3051,7 +3057,7 @@ div[data-tippy-root] {
       -webkit-justify-content: space-between;
           -ms-flex-pack: justify;
               justify-content: space-between; }
-    .catalog-filters .item .slide input[type=number] {
+    .catalog-filters .item .slide input[type=text] {
       width: -webkit-calc(50% - 40px);
       width: calc(50% - 40px);
       padding: 2px 5px;
