@@ -1,5 +1,7 @@
 # Айтем продукту
 стандартний айтем 
+
+```
  <div class="item pr__origin">
     <div class="item-wr">
         <div class="stocks">
@@ -64,3 +66,14 @@
 
     </div>
  </div>
+```
+---
+# блок з акціями
+Сюди вставляються просто спани з текстом
+```
+<div class="stocks">
+            <span>new</span>
+            <span>Знижка</span>
+</div>
+```
+---
