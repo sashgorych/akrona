@@ -82,12 +82,12 @@
 На картинці показано можливі варіанти вигляду товару, а в списку класи які треба додати.
 По дефолту має завжди бути клас item і якись з нище перелічених(без них товар буде криво відображатись):
 
-1) pr__origin має вийти <div class="item pr__origin">
-2) pr__weight not-available має вийти <div class="item pr__weight not-available">
-3) pr__colors має вийти <div class="item pr__colors">
-4) pr__weight має вийти <div class="item pr__weight">
-5) pr__colors not-available має вийти <div class="item pr__colors not-available">
-6) pr__origin not-available має вийти <div class="item pr__origin not-available">
+1) pr__origin має вийти ```<div class="item pr__origin">```
+2) pr__weight not-available має вийти ```<div class="item pr__weight not-available">```
+3) pr__colors має вийти ```<div class="item pr__colors">```
+4) pr__weight має вийти ```<div class="item pr__weight">```
+5) pr__colors not-available має вийти ```<div class="item pr__colors not-available">```
+6) pr__origin not-available має вийти ```<div class="item pr__origin not-available">```
  
  ![Alt-текст](https://github.com/sashgorych/akrona/blob/master/%D1%96%D0%B2%D0%B0%D0%B2%D0%B0%D0%B2%D0%B0.jpg "Орк")
 ---
@@ -102,6 +102,7 @@
 ---
 # Рейтинг товару
 в data-rate вставляти рейтинг у % (в прикладі 50%) далі js-ом все обробиться
+```
 <div class="middle-block">
             <div class="rating" data-rate="50">
                 <span class="rateStarPopup"></span>
@@ -111,37 +112,43 @@
                 <span class="rateStarPopup"></span>
             </div>
 </div>
+```
 ---
 # Неактивний товар
 Блок який відобразиться коли товар неактивний
+```
  <div class="not-available-block">
             <p>немає в наявності</p>
             <a href="">Повідомити про наявність</a>
         </div>
- нище по коду буде ще кнопка  <button class="make-order">Замовити</button>
+        ```
+ нище по коду буде ще кнопка  ```<button class="make-order">Замовити</button>```
  
 ---
 # Блок з кольором і вагою
 
 цей блок відображається якщо в товарі є різновиди кольору. в span в style треба закидувати колір 
+```
  <div class="item-kinds colors">
             <a href="#" class="state-active"><span style="background: #979A9A"></span></a>
             <a href="#" class="state-active"><span style="background: #979A9A"></span></a>
  </div>
- 
+ ```
 цей блок відображається якщо в товарі є різновиди по масі упакування      
+        ```
         <div class="item-kinds weights">
             <a href="" class=""><span>0.1 кг</span></a>
             <a href="" class=""><span>0.25 кг</span></a>
             <a href="" class="state-active"><span>1 кг</span></a>
         </div>
-        
+        ```
 Ці два блоки можна відображати одночасно, css сховає лишнє
 
 ---
 
 # Ціна товару
 в div.product-price-old-container стара ціна. в div.product-price актуальна ціна. якщо немає акції то відображається ціна в div.product-price
+```
 <div class="product-prices">
                     <p class="product-price">182 <span>грн</span></p>
                     <div class="product-price-old">
@@ -151,3 +158,4 @@
                         </div>
                     </div>
  </div>
+ ```
