@@ -6,7 +6,7 @@
     <div class="item-wr">
         <div class="stocks">
             <span>new</span>
-            <span>Знижка</span>
+            <span>`Знижка`</span>
         </div>
         <div class="set-favourite">
             <a href="" class=""></a>
