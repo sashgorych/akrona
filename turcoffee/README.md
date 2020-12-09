@@ -34,7 +34,9 @@
             <a href="">Повідомити про наявність</a>
         </div>
         <div class="item-kinds colors">
-            <a href="" class="state-active"><span style="background: #979A9A"></span></a>
+           <a href="#" class="state-active"><span style="background: #979A9A"></span></a>
+            <a href="#" class=""><span style="background: #979A9A"></span></a>
+             <a href="#" class=""><span style="background: #979A9A"></span></a>
         </div>
         <div class="item-kinds weights">
             <a href="" class=""><span>0.1 кг</span></a>
@@ -91,7 +93,7 @@
  
  ![Alt-текст](https://github.com/sashgorych/akrona/blob/master/%D1%96%D0%B2%D0%B0%D0%B2%D0%B0%D0%B2%D0%B0.jpg "Орк")
 ---
-# блок з акціями
+# блок з акціями (*червоні маркери на товарі)
 Поки що було тільки 2 акційні маркери знижка і новинка. 
 ```
 <div class="stocks">
@@ -133,15 +135,18 @@
 
 цей блок відповідає за різновиди кольору. в span в style треба закидувати колір товару
 
+Клас state-active в <a> показує якого кольору товар відображається.( в дизайні кружочок активного кольору має активний стан.) 
 
 ```
 <div class="item-kinds colors">
             <a href="#" class="state-active"><span style="background: #979A9A"></span></a>
-            <a href="#" class="state-active"><span style="background: #979A9A"></span></a>
+            <a href="#" class=""><span style="background: #979A9A"></span></a>
+             <a href="#" class=""><span style="background: #979A9A"></span></a>
  </div>
 ```
  
 цей блок відповідає за різновид по масі упакування      
+Клас state-active в <a> показує якої фасовки товар зараз відображається( в дизайні цифра 'активної' фасовки має активний стан.) 
 
 ```
         <div class="item-kinds weights">
