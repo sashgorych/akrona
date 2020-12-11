@@ -1,0 +1,81 @@
+   <div class="container__about-us">
+            <div class="container__about-us-row">
+                <div class="container__about-us-col container__about-us-col-left">
+                    <div class="about-contetn">
+                        <h2>Виробництво</h2>
+                        <p class="article-content__text">Використовуйте всі можливості власного виробничого комплексу Frozenfood UA, а також контрактного виробництва на кращих майданчиках України</p>
+                        <ul>
+                            <li class="landing-block-node-element-list-item">FSSC | HACCP</li>
+                            <li class="landing-block-node-element-list-item">IQF</li>
+                            <li class="landing-block-node-element-list-item">СУЧАСНЕ ОБЛАДНАННЯ</li>
+                            <li class="landing-block-node-element-list-item">ВИСОКІ СТАНДАРТИ БЕЗПЕКИ</li>
+                            <li class="landing-block-node-element-list-item">КОНТРАКТНЕ ВИРОБНИЦТВО</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="container__about-us-col ">
+                    <div class="article-content__img">
+                        <img src="https://frozenfood.com.ua/wp-content/uploads/2019/12/depositphotos_36186243-stock-photo-work-surface-and-kitchen-equipment.jpg" alt="">
+                    </div>
+                </div>
+            </div>
+            <div class="container__about-us-row container__about-us-row-reverse">
+                <div class="container__about-us-col">
+                    <div class="article-content__img">
+                        <img src="https://frozenfood.com.ua/wp-content/uploads/2020/01/DSC07108-Edit-scaled.jpg" alt="">
+                    </div>
+                </div>
+                <div class="container__about-us-col container__about-us-col-right">
+                    <h2>Упаковка</h2>
+                    <p class="article-content__text">Максимально гнучкі можливості щодо зменення/ доробці/ адаптації упаковки. Чудовий дизайн включений у вартість</p>
+                    <ul class="landing-block-node-element-list list-unstyled text-uppercase g-mb-0" title="" contenteditable="true" data-selector=".landing-block-node-element-list@1">
+                        <li class="landing-block-node-element-list-item g-brd-bottom g-brd-gray-light-v3 g-py-10 g-font-roboto">PRIVATE LABEL</li>
+                        <li class="landing-block-node-element-list-item g-brd-bottom g-brd-gray-light-v3 g-py-10 g-font-roboto">РОЗРОБКА КОНСТРУКТИВУ</li>
+                        <li class="landing-block-node-element-list-item g-brd-bottom g-brd-gray-light-v3 g-py-10 g-font-roboto">ПІДБІР МАТЕРИАЛІВ</li>
+                        <li class="landing-block-node-element-list-item g-brd-bottom g-brd-gray-light-v3 g-py-10 g-font-roboto">АДАПТАЦІЯ ТЕХНІЧНИХ ТЕКСТІВ</li>
+                        <li class="landing-block-node-element-list-item g-brd-bottom g-brd-gray-light-v3 g-py-10 g-font-roboto">ДИЗАЙН</li>
+                        <li class="landing-block-node-element-list-item g-brd-bottom g-brd-gray-light-v3 g-py-10 g-font-roboto">ТРАНСПОРТНА ТАРА</li>
+                    </ul>
+                </div>
+
+            </div>
+            <div class="container__about-us-row">
+                <div class="container__about-us-col container__about-us-col-left">
+                    <div class="about-contetn">
+                        <h2>Логистика</h2>
+                        <p>Наші постійні клієнти із задоволенням користуються повним спектром логістичних послуг</p>
+                        <ul>
+                            <li>ДОСТАВКА В БУДЬ-ЯКУ ТОЧКУ СВІТУ</li>
+                            <li>КОНСОЛІДАЦІЯ ВАНТАЖІВ</li>
+                            <li>МИТНІ ПРОЦЕДУРИ</li>
+                            <li>СЕРТИФІКАЦІЯ</li>
+                            <li>ВІДПОВІДАЛЬНЕ ЗБЕРІГАННЯ</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="container__about-us-col">
+                    <div class="article-content__img">
+                        <img src="https://frozenfood.com.ua/wp-content/uploads/2020/01/Depositphotos_117910056_xl-2015.jpg" alt="">
+                    </div>
+                </div>
+            </div>
+            <div class="container__about-us-row container__about-us-row-reverse">
+                <div class="container__about-us-col">
+                    <div class="article-content__img">
+                        <img src="https://frozenfood.com.ua/wp-content/uploads/2019/12/article-img.jpg" alt="">
+                    </div>
+                </div>
+                <div class="container__about-us-col container__about-us-col-right">
+                    <h2>Розробка</h2>
+                    <p class="article-content__text">Знаєте, що потрібно саме для вашого ринку? Ми розробимо або адаптуємо такий продукт для вас</p>
+                    <ul class="landing-block-node-element-list list-unstyled text-uppercase g-mb-0" title="" contenteditable="true" data-selector=".landing-block-node-element-list@1">
+                        <li class="landing-block-node-element-list-item g-brd-bottom g-brd-gray-light-v3 g-py-10 g-font-roboto">РЕЦЕПТУРА</li>
+                        <li class="landing-block-node-element-list-item g-brd-bottom g-brd-gray-light-v3 g-py-10 g-font-roboto">ВКУСОВІ ЯКОСТІ</li>
+                        <li class="landing-block-node-element-list-item g-brd-bottom g-brd-gray-light-v3 g-py-10 g-font-roboto">ЦІНА</li>
+                        <li class="landing-block-node-element-list-item g-brd-bottom g-brd-gray-light-v3 g-py-10 g-font-roboto">ДЕКОР</li>
+                        <li class="landing-block-node-element-list-item g-brd-bottom g-brd-gray-light-v3 g-py-10 g-font-roboto">ВИМОГИ ЗАКОНОДАВСТВА</li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
