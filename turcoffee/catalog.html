@@ -8,6 +8,7 @@
     <meta name="keywords" content="">
     <title></title>
     <link rel="icon" href="./images/fav.png">
+    <link rel="stylesheet" href="./css/slick-lightbox.css">
     <link rel="stylesheet" href="./css/main.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css">
@@ -219,7 +220,9 @@
             <div class="catalog-filters">
                 <div class="item">
                     <p class="custom-link">Фільтри</p>
+                    <div class="icon-close"><span></span></div>
                 </div>
+
                 <div class="item">
                     <div class="item-in">
                         <p class="f-title active">Ціна</p>
@@ -273,11 +276,35 @@
                         </div>
                     </div>
                 </div>
+                <div class="item">
+                    <div class="item-in">
+                        <div class="item__one__line">
+                        <p class="f-title">Показувати лише товари в наявності</p>
+                        <div class="switch">
+                            <label>
+                            <input type="checkbox" class="hidden-object">
+                            <span class="slider round"></span>
+                            </label>
+                        </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="item-in">
+                        <div class="item__one__line">
+                            <a href="" class="custom-button__white ">Скинути</a>
+                            <a href="" class="custom-button__white">Показати</a>
+                        </div>
+                    </div>
+                </div>
+
             </div>
             <div class="catalog-items">
                 <div class="title-line-block">
                     <div class="title-line-block-text">
-                        <h3 class="title-line-block-text-text">Техніка Arzumv</h3>
+                        <h3 class="title-line-block-text-text">
+                            <img src="./images/temp/arzum.svg" alt="">
+                            Техніка Arzumv</h3>
                     </div>
                     <div class="title-line-block-line"></div>
                     <div class="sort__method">
@@ -292,6 +319,10 @@
                         </div>
 
                     </div>
+                </div>
+                <div class="mobile_filters_btns filtered">
+                    <a href="" class="custom-button__white toggle__filter_mobile"><span>2</span>Фільтри</a>
+                    <a href="" class="custom-button__white">Сортування</a>
                 </div>
                 <div class="product-list">
                     <div class="products-container">
@@ -1158,6 +1189,7 @@
 <script src="https://unpkg.com/tippy.js@6/dist/tippy-bundle.umd.js"></script>
 <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui-touch-punch/0.2.3/jquery.ui.touch-punch.min.js"></script>
+<script type='text/javascript' src='./js/slick-lightbox.js'></script>
 <script type='text/javascript' src='./js/main.js'></script>
 </body>
 </html>
