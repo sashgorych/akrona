@@ -16,6 +16,26 @@ let words = {
     "productFavHint": 'В обране'
 }
 
+//smooth scroll
+$('a[href*=#]:not([href=#])').click(function() {
+    if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+        var target = $(this.hash);
+        target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+        if (target.length) {
+            $('html,body').animate({
+                scrollTop: target.offset().top
+            }, 1000);
+            return false;
+        }
+    }
+});
+
+//page navigation nav start
+$('.page__navigation a.active').click(function (e) {
+    e.preventDefault()
+})
+//page navigation nav end
+
 //header scripts start----------------------------------------------------------------------------
 //for menu start----------------------------------------
 function unlockBg() {
@@ -110,6 +130,7 @@ $('.search-mobile-form-close .icon-close').click(function (e) {
 //mobile search block. open btn click (in mobile menu)
 $('.mobile-search').click(function (e) {
     e.preventDefault()
+    hideMainMenu()
     showMobileSearchBlock()
 })
 
@@ -141,7 +162,7 @@ function clearMobileSearchInput() {
 //search end ----------------------------------------
 
 //header scripts end -----------------------------------------------------------------------------
-if(document.querySelector('.products-slider')) {
+if (document.querySelector('.products-slider')) {
     $('.products-slider').slick({
         slidesToShow: 5,
         arrows: true,
@@ -184,7 +205,7 @@ if(document.querySelector('.products-slider')) {
         ]
     });
 }
-if(document.querySelector('.beneficial-offers-slider')) {
+if (document.querySelector('.beneficial-offers-slider')) {
     $('.beneficial-offers-slider').slick({
         slidesToShow: 4,
         arrows: true,
@@ -227,7 +248,7 @@ if(document.querySelector('.beneficial-offers-slider')) {
         ]
     });
 }
-if(document.querySelector('.banner-slider-pc')) {
+if (document.querySelector('.banner-slider-pc')) {
     $('.banner-slider-pc').slick({
         dots: true,
         arrows: true,
@@ -241,7 +262,7 @@ if(document.querySelector('.banner-slider-pc')) {
             }]
     });
 }
-if(document.querySelector('.banner-slider-mobile')) {
+if (document.querySelector('.banner-slider-mobile')) {
     $('.banner-slider-mobile').slick({
         dots: true,
         arrows: true
@@ -406,6 +427,7 @@ function setStarInPercent(element, percent) {
 
 //catalog page start
 function priceSliderInit() {
+    let element = document.querySelector('.valueMin').closest('.item')
     let minValue = +document.querySelector('.valueMin').dataset.valuemin;
     let maxValue = +document.querySelector('.valueMax').dataset.valuemax;
     console.log(minValue)
@@ -418,20 +440,24 @@ function priceSliderInit() {
         slide: function (event, ui) {
             $("#min").val(ui.values[0])
             $("#max").val(ui.values[1])
+            changePrice();
         }
     });
     $("#amount").val("$" + $("#slider-range").slider("values", 0) +
         " - $" + $("#slider-range").slider("values", 1));
 }
+
 function showFilterBlock() {
     $('.catalog-filters').addClass('active')
     lockBg()
 }
+
 function hideFilterBlock() {
     $('.catalog-filters').removeClass('active')
     unlockBg();
 }
-if(document.querySelector('.catalog')) {
+
+if (document.querySelector('.catalog')) {
 //sort popup
     $('.selected__method').click(function (e) {
         e.preventDefault()
@@ -445,7 +471,6 @@ if(document.querySelector('.catalog')) {
     //filters open
     $('.f-title').click(function (e) {
         e.preventDefault()
-        console.log('here')
         if (!$(this).parent().find('.content').hasClass('active')) {
             $(this).parent().find('.content').addClass('active')
             $(this).addClass('active')
@@ -472,10 +497,50 @@ if(document.querySelector('.catalog')) {
     })
 
 }
+
+//filter start
+
+let timeOutFilterRequest;
+function filterRequest() {
+    let filterForm = document.querySelector('#turcoffee_product_filter')
+    for( var i=0; i<filterForm.elements.length; i++ )
+    {
+        if(filterForm.elements[i].checked) {
+            var fieldName = filterForm.elements[i].name;
+            var fieldValue = filterForm.elements[i].value;
+
+        }
+    }
+}
+
+function sendWithTimeOut() {
+    clearTimeout(timeOutFilterRequest);
+    timeOutFilterRequest = setTimeout(() => {
+        filterRequest();
+    }, 1500)
+}
+function changePrice() {
+    sendWithTimeOut();
+}
+
+let filtersContainer = document.querySelector('.catalog-filters');
+if(filtersContainer) {
+    filtersContainer.addEventListener('click', function (e) {
+        let curElement = e.target;
+        if (curElement.tagName.toUpperCase() == 'INPUT') {
+            sendWithTimeOut()
+            return;
+        }
+    })
+}
+//filter end
+
+
 //catalog page end
 
 //product page start
-console.log('here')
+
+// product img slider start
 $(".product__media-main__img").slick({
     asNavFor: ".product__media-thumbs",
     arrows: false
@@ -485,19 +550,125 @@ $(".product__media-thumbs").slick({
     slidesToShow: 2,
     asNavFor: ".product__media-main__img",
     focusOnSelect: true,
+    responsive: [
+        {
+            breakpoint: 576,
+            settings: {
+                slidesToShow: 3,
+                slidesToScroll: 3
+            }
+        }
+        ]
 });
 $('.product__media-main__img').slickLightbox({
     src: 'href',
     itemSelector: 'a'
 });
 
-//product page end
+//cut description
+if (document.querySelector('.product__description__content')) {
+    //hide children if more than 2
+    let child = $('.product__description__content').children(":not(:nth-child(1)):not(:nth-child(2)):not(.product__show__more)");
 
+    let contentDiv = $('.product__description__content__hidden__text');
+    contentDiv.prepend(child);
+    $('.product__description__content__hidden__text').slideUp()
+}
+//show all description
+$('.product__show__more').click(function (e) {
+    $(this).parents('.product__description').addClass('active')
+    $('.product__description__content__hidden__text').slideDown()
+
+})
+$('.product__show__less').click(function (e) {
+    $(this).parents('.product__description').removeClass('active')
+    $('.product__description__content__hidden__text').slideUp()
+
+})
+
+//product page end
 
 
 function makeSearchRequest(dataStr) {
     console.log(dataStr)
 }
+
+//lazy load video from youtube start
+
+function findVideos() {
+    let videos = document.querySelectorAll('.video');
+
+    for (let i = 0; i < videos.length; i++) {
+        setupVideo(videos[i]);
+    }
+}
+
+function setupVideo(video) {
+    let link = video.querySelector('.video__link');
+    let media = video.querySelector('.video__media');
+    let button = video.querySelector('.video__button');
+    let id = parseMediaURL(media);
+
+    video.addEventListener('click', () => {
+        let iframe = createIframe(id);
+
+        link.remove();
+        button.remove();
+        video.appendChild(iframe);
+    });
+
+    link.removeAttribute('href');
+    video.classList.add('video--enabled');
+}
+
+function parseMediaURL(media) {
+    console.log(media)
+    let regexp = /https:\/\/i\.ytimg\.com\/vi\/([a-zA-Z0-9_-]+)\/maxresdefault\.jpg/i;
+    let url = media.src;
+    let match = url.match(regexp);
+
+    return match[1];
+}
+
+function createIframe(id) {
+    let iframe = document.createElement('iframe');
+
+    iframe.setAttribute('allowfullscreen', '');
+    iframe.setAttribute('allow', 'autoplay');
+    iframe.setAttribute('src', generateURL(id));
+    iframe.classList.add('video__media');
+
+    return iframe;
+}
+
+function generateURL(id) {
+    let query = '?rel=0&showinfo=0&autoplay=1';
+
+    return 'https://www.youtube.com/embed/' + id + query;
+}
+
+function initVideo(videoTag) {
+    let link = videoTag.querySelector('.video__link').href;
+    let video_id = link.split('v=')[1];
+    let ampersandPosition = video_id.indexOf('&');
+    if (ampersandPosition != -1) {
+        video_id = video_id.substring(0, ampersandPosition);
+    }
+    let img_source = videoTag.querySelector('source');
+    let img_source_src = "https://i.ytimg.com/vi_webp/" + video_id + "/maxresdefault.webp"
+    img_source.setAttribute('srcset', img_source_src)
+    let img_prev = videoTag.querySelector('.video__media');
+    let img_prev_src = "https://i.ytimg.com/vi/" + video_id + "/maxresdefault.jpg"
+    img_prev.setAttribute('src', img_prev_src)
+    findVideos();
+}
+
+if (document.querySelector('.video')) {
+    initVideo(document.querySelector('.video'))
+
+}
+//load video from youtube end
+
 
 //# sourceMappingURL=main.js.map
 //# sourceMappingURL=main.js.map

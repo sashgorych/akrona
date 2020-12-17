@@ -218,9 +218,12 @@
     <div class="container-block">
         <div class="catalog-content">
             <div class="catalog-filters">
+                <form action="" id="turcoffee_product_filter">
                 <div class="item">
+                    <div class="item_top">
                     <p class="custom-link">Фільтри</p>
                     <div class="icon-close"><span></span></div>
+                    </div>
                 </div>
 
                 <div class="item">
@@ -247,12 +250,12 @@
                         <p class="f-title">Тип</p>
                         <div class="content">
                             <label class="check option">
-                                <input type="checkbox" class="check__input hidden-object">
+                                <input type="checkbox" class="check__input hidden-object" name="type1">
                                 <span class="check__box"></span>
                                 <span class="check__text">Гейзерна електрична</span>
                             </label>
                             <label class="check option">
-                                <input type="checkbox" class="check__input hidden-object">
+                                <input type="checkbox" class="check__input hidden-object" name="type2">
                                 <span class="check__box"></span>
                                 <span class="check__text">Електрична турка</span>
                             </label>
@@ -264,12 +267,12 @@
                         <p class="f-title">Об'єм резервуара для води</p>
                         <div class="content">
                             <label class="check option">
-                                <input type="checkbox" class="check__input hidden-object">
+                                <input type="checkbox" class="check__input hidden-object" name="capacity1">
                                 <span class="check__box"></span>
                                 <span class="check__text">1 - 1.4 л</span>
                             </label>
                             <label class="check option">
-                                <input type="checkbox" class="check__input hidden-object">
+                                <input type="checkbox" class="check__input hidden-object" name="capacity2">
                                 <span class="check__box"></span>
                                 <span class="check__text">1.5 - 2 л</span>
                             </label>
@@ -282,22 +285,14 @@
                         <p class="f-title">Показувати лише товари в наявності</p>
                         <div class="switch">
                             <label>
-                            <input type="checkbox" class="hidden-object">
+                            <input type="checkbox" class="hidden-object" name="">
                             <span class="slider round"></span>
                             </label>
                         </div>
                         </div>
                     </div>
                 </div>
-                <div class="item">
-                    <div class="item-in">
-                        <div class="item__one__line">
-                            <a href="" class="custom-button__white ">Скинути</a>
-                            <a href="" class="custom-button__white">Показати</a>
-                        </div>
-                    </div>
-                </div>
-
+                </form>
             </div>
             <div class="catalog-items">
                 <div class="title-line-block">
@@ -320,7 +315,7 @@
 
                     </div>
                 </div>
-                <div class="mobile_filters_btns filtered">
+                <div class="mobile_filters_btns">
                     <a href="" class="custom-button__white toggle__filter_mobile"><span>2</span>Фільтри</a>
                     <a href="" class="custom-button__white">Сортування</a>
                 </div>
@@ -1108,6 +1103,17 @@
 
 
                     </div>
+                </div>
+                <div class="show__more__catalog">
+                    <img src="./images/icons/" alt="">
+                    <button class="show__more__catalog__btn custom-button__white">Показати ще</button>
+                </div>
+                <div class="page__navigation">
+                    <a href="" class="active">1</a>
+                    <a href="">2</a>
+                    <a href="">3</a>
+                    <span>...</span>
+                    <a href="">10</a>
                 </div>
             </div>
         </div>
