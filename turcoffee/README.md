@@ -1,4 +1,4 @@
-[Різні товару](#Різні-стани-товару)
+[Сторінка продукту](#Сторінка-продукту)
 
 
 
@@ -182,3 +182,113 @@
 # Інше
 в кінці футера, перед скріптами є section.text-templates
 в цьому блоці шаблони для підсказок в товарі (наведи на сердечко, кошик). Вивів це в html для зручності переводу на різні мови
+
+
+---
+
+# Сторінка продукту
+## Фото продукту
+
+в <a href="./images/temp/product-item500x500.jpg" class="item">  вставляється велика картинка (буде відкриватись на весь екран)
+ в <img src="./images/temp/product-item500x500.jpg" alt=""> вставляється маленька картинка, ну або та ж сама велика
+```
+    <div class="product__media">
+                        <div class="product__media-main__img">
+                            <a href="./images/temp/product-item500x500.jpg" class="item">  
+                                <img src="./images/temp/product-item500x500.jpg" alt="">
+                            </a>
+                            <a href="./images/temp/product-img3.jpg" class="item">
+                                <img src="./images/temp/product-img3.jpg" alt="">
+                            </a>
+                            <a href="./images/temp/product-img2.jpg" class="item">
+                                <img src="./images/temp/product-img2.jpg" alt="">
+                            </a>
+                        </div>
+                    <div class="product__media-360"></div>
+                    <div class="product__media-thumbs">
+                        <div class="item">
+                            <div class="item-in">
+                                <img src="./images/temp/product-item500x500.jpg" alt="">
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="item-in">
+                            <img src="./images/temp/product-img3.jpg" alt="">
+                        </div>
+                        </div>
+                        <div class="item">
+                            <div class="item-in">
+
+                            <img src="./images/temp/product-img2.jpg" alt="">
+                        </div>
+                        </div>
+                    </div>
+            </div>
+```
+## Акції
+Тут так само як і в акціях в каталозі
+до section.product-page додаються класи
+1) discount - якщо є знижка + там де ціна вивести альтернативну ціну. css все відобразить
+2) pr_new - якщо товар новинка
+3) not-available - якщо товару нема в наявності + 
+                                                  в коді є div
+                                                  ```
+                                                   <div class="not__available">
+                                                      <p>Немає в наявності</p>
+                                                      <button class="make-order">Замовити</button>
+                                                    </div>
+                                                   ```
+                                                  тут або button - якщо буде попап або <a> якщо посилання 
+
+## Кольори, вага
+виводити або <div class="item-kinds colors"> 
+ або
+<div class="item-kinds weights">
+ або
+ нічого (якщо нема ні кольорів, ні ваг)
+```
+<div class="product-kinds">
+                <div class="item-kinds colors">
+                    <a href="" class="state-active" tabindex="0"><span style="background: #979A9A"></span></a>
+                    <a href="" class="" tabindex="0"><span style="background: #979A9A"></span></a>
+                </div>
+                <!--<div class="item-kinds weights">-->
+                    <!--<a href="" class="" tabindex="0"><span>0.1 кг</span></a>-->
+                    <!--<a href="" class="" tabindex="0"><span>0.25 кг</span></a>-->
+                    <!--<a href="" class="state-active" tabindex="0"><span>1 кг</span></a>-->
+                <!--</div>-->
+            </div>
+```
+
+## Відео
+
+ця конструкція передбачена для відео з ютубу. Це потрібно щоб воно прогружалось лише в випадку коли користувач дійсно хоче його подивитись (економія трафіку)
+
+В <a> class video__link вставляти посилання на відео
+```
+<div class="product__part4">
+                <div class="video">
+                    <a class="video__link" href="https://www.youtube.com/watch?v=2sdIzYBoTO4&ab_channel=Arzum">
+                        <picture>
+                            <source srcset="" type="image/webp">
+                            <img class="video__media" src="" alt="video">
+                        </picture>
+                    </a>
+                    <button class="video__button" aria-label="Запустити відео">
+                        <svg width="68" height="48" viewBox="0 0 68 48"><path class="video__button-shape" d="M66.52,7.74c-0.78-2.93-2.49-5.41-5.42-6.19C55.79,.13,34,0,34,0S12.21,.13,6.9,1.55 C3.97,2.33,2.27,4.81,1.48,7.74C0.06,13.05,0,24,0,24s0.06,10.95,1.48,16.26c0.78,2.93,2.49,5.41,5.42,6.19 C12.21,47.87,34,48,34,48s21.79-0.13,27.1-1.55c2.93-0.78,4.64-3.26,5.42-6.19C67.94,34.95,68,24,68,24S67.94,13.05,66.52,7.74z"></path><path class="video__button-icon" d="M 45,24 27,14 27,34"></path></svg>
+                    </button>
+                </div>
+            </div>
+```
+Якщо потрібно вставляти інші відео(не з ютубу) ось така конструкція
+```
+
+<div class="product__part4">
+                <div class="video video--enabled">
+                <iframe src=''>
+                </iframe>
+                 </div>
+</div>
+```
+
+якщо ж відео нема то не виводити блок div.product__part4
