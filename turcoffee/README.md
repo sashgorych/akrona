@@ -189,8 +189,8 @@
 # Сторінка продукту
 ## Фото продукту
 
-в <a href="./images/temp/product-item500x500.jpg" class="item">  вставляється велика картинка (буде відкриватись на весь екран)
- в <img src="./images/temp/product-item500x500.jpg" alt=""> вставляється маленька картинка, ну або та ж сама велика
+в ```<a href="./images/temp/product-item500x500.jpg" class="item">  вставляється велика картинка (буде відкриватись на весь екран)```
+ в ```<img src="./images/temp/product-item500x500.jpg" alt="">``` вставляється маленька картинка, ну або та ж сама велика
 ```
     <div class="product__media">
                         <div class="product__media-main__img">
@@ -241,9 +241,9 @@
                                                   тут або button - якщо буде попап або <a> якщо посилання 
 
 ## Кольори, вага
-виводити або <div class="item-kinds colors"> 
+виводити або ``<div class="item-kinds colors"> ```
  або
-<div class="item-kinds weights">
+```<div class="item-kinds weights">```
  або
  нічого (якщо нема ні кольорів, ні ваг)
 ```
@@ -264,7 +264,7 @@
 
 ця конструкція передбачена для відео з ютубу. Це потрібно щоб воно прогружалось лише в випадку коли користувач дійсно хоче його подивитись (економія трафіку)
 
-В <a> class video__link вставляти посилання на відео
+В `<a>` class video__link вставляти посилання на відео
 ```
 <div class="product__part4">
                 <div class="video">
