@@ -125,6 +125,7 @@ $('.search-mobile-form-input-clear').click(function (e) {
 //mobile search block. close btn click
 $('.search-mobile-form-close .icon-close').click(function (e) {
     hideMobileSearchBlock()
+
 })
 
 //mobile search block. open btn click (in mobile menu)
@@ -133,7 +134,14 @@ $('.mobile-search').click(function (e) {
     hideMainMenu()
     showMobileSearchBlock()
 })
-
+$('.search').click(function (e) {
+    if(screen.width<576) {
+        e.preventDefault()
+        showDarkMenuBg();
+        lockBg();
+        showMobileSearchBlock()
+    }
+})
 //mobile search block.make search btn click.
 $('.search-mobile-form-input-btn').click(function (e) {
     e.preventDefault();
@@ -153,6 +161,8 @@ function showMobileSearchBlock() {
 
 function hideMobileSearchBlock() {
     $('.search-mobile-form').removeClass('active')
+    unlockBg();
+    hideDarkMenuBg()
 }
 
 function clearMobileSearchInput() {
@@ -285,9 +295,7 @@ if (!isIE) {
 
     });
 }
-$('.search').hover(function (e) {
-    $('.search').addClass('active')
-})
+
 $('.current-language').click(function (e) {
     e.preventDefault()
     if (!$('.language-list').hasClass('active')) {
