@@ -192,9 +192,9 @@
 в ```<a href="./images/temp/product-item500x500.jpg" class="item">  вставляється велика картинка (буде відкриватись на весь екран)```
  в ```<img src="./images/temp/product-item500x500.jpg" alt="">``` вставляється маленька картинка, ну або та ж сама велика
 ```
-    <div class="product__media">
+               <div class="product__media">
                         <div class="product__media-main__img">
-                            <a href="./images/temp/product-item500x500.jpg" class="item">  
+                            <a href="./images/temp/product-item500x500.jpg" class="item">
                                 <img src="./images/temp/product-item500x500.jpg" alt="">
                             </a>
                             <a href="./images/temp/product-img3.jpg" class="item">
@@ -204,7 +204,18 @@
                                 <img src="./images/temp/product-img2.jpg" alt="">
                             </a>
                         </div>
-                    <div class="product__media-360"></div>
+                    <div class="product__media-360">
+                        <div class="item item-360">
+                            <div class="item-in">
+                                <img src="./images/temp/product-item500x500.jpg" alt="">
+                            </div>
+                        </div>
+                        <div class="item item-video">
+                            <div class="item-in">
+                                <img src="./images/temp/product-item500x500.jpg" alt="">
+                            </div>
+                        </div>
+                    </div>
                     <div class="product__media-thumbs">
                         <div class="item">
                             <div class="item-in">
@@ -224,6 +235,7 @@
                         </div>
                     </div>
             </div>
+
 ```
 ## Акції
 Тут так само як і в акціях в каталозі
