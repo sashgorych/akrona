@@ -191,6 +191,7 @@
 
 в ```<a href="./images/temp/product-item500x500.jpg" class="item">  вставляється велика картинка (буде відкриватись на весь екран)```
  в ```<img src="./images/temp/product-item500x500.jpg" alt="">``` вставляється маленька картинка, ну або та ж сама велика
+ в ``` <div class="product__media-360"> ``` тут 360 і відеоогляд товару. якщо нема то повність не виводиш div.product__media-360
 ```
                <div class="product__media">
                         <div class="product__media-main__img">
@@ -257,7 +258,7 @@
  або
 ```<div class="item-kinds weights">```
  або
- нічого (якщо нема ні кольорів, ні ваг)
+ нічого (якщо нема ні кольорів, ні ваг) (залишаєш <div class="product-kinds"> пустим - не видялаєш його)
 ```
 <div class="product-kinds">
                 <div class="item-kinds colors">
