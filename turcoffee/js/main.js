@@ -314,7 +314,7 @@ $(document).click(function (e) {
 
     //catalog page. sort block when click outside
     let selected__method = $(".selected__method");
-    if (!selected__method.is(e.target) && selected__method.has(e.target).length === 0) {
+    if (!selected__method.is(e.target) && selected__method.has(e.target).length === 0 && screen.width>576) {
         $('.method__list').removeClass('active')
     }
 })
@@ -498,6 +498,14 @@ if (document.querySelector('.catalog')) {
         e.preventDefault()
         showFilterBlock();
     })
+    $('.toggle__filter_sort').click(function (e) {
+        e.preventDefault()
+        showSortingBlock();
+    })
+    $('.close__sorting').click(function (e) {
+        e.preventDefault()
+        hideSortingBlock();
+    })
     //close filter. click close btn
     $('.catalog-filters .icon-close').click(function (e) {
         e.preventDefault()
@@ -505,7 +513,16 @@ if (document.querySelector('.catalog')) {
     })
 
 }
-
+function hideSortingBlock() {
+    $('.method__list').removeClass('active')
+    $('.sort__method').removeClass('active')
+    unlockBg()
+}
+function showSortingBlock() {
+$('.method__list').addClass('active')
+$('.sort__method').addClass('active')
+    lockBg()
+}
 //filter start
 
 let timeOutFilterRequest;
