@@ -1,0 +1,167 @@
+<style>
+    .instagram-photos img{
+        width: 100%;
+    }
+    .instagram-photos {
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-flex-wrap: wrap;
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+        margin: 0 -8px 16px; }
+
+    .instagram-photo {
+        border: 4px solid #fff;
+        -webkit-box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.1);
+        box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.1);
+        -webkit-box-flex: 1;
+        -webkit-flex: 1 0 auto;
+        -ms-flex: 1 0 auto;
+        flex: 1 0 auto;
+        margin: 8px;
+        position: relative;
+        width: -webkit-calc(100% / 2 - (8px * 2));
+        width: calc(100% / 2 - (8px * 2));
+        max-width: 293px; }
+
+    @media only screen and (min-width: 768px) {
+        .instagram-photo {
+            width: -webkit-calc(100% / 4 - (8px * 2));
+            width: calc(100% / 4 - (8px * 2)); } }
+
+    .instagram-photo:focus::after, .instagram-photo:hover::after {
+        background: rgba(0, 0, 0, 0.5);
+        bottom: 0;
+        content: "";
+        display: block;
+        left: 0;
+        position: absolute;
+        right: 0;
+        z-index: 1;
+        top: 0; }
+
+    .insta__container {
+        margin: auto;
+        max-width: 935px; }
+
+    .post_icons {
+        display: none;
+        cursor: pointer;
+        z-index: 2;
+        top: 50%;
+        left: 50%;
+        -webkit-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+        position: absolute; }
+    .post_icons ul {
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex; }
+    .post_icons ul li {
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex; }
+    .post_icons ul li .inst-icon {
+        background-image: url("../images/insta.png"); }
+    .post_icons ul li .inst-count {
+        color: white;
+        margin-left: 5px;
+        margin-right: 20px; }
+    .post_icons ul li .icon-like {
+        background-repeat: no-repeat;
+        background-position: 0px 0px;
+        height: 19px;
+        width: 19px; }
+    .post_icons ul li .icon-comment {
+        background-repeat: no-repeat;
+        background-position: -42px 0;
+        height: 19px;
+        width: 19px; }
+
+    .instagram-photo:focus .post_icons, .instagram-photo:hover .post_icons {
+        display: block; }
+
+    .red__line {
+        height: 33px;
+        background-color: #cc2e26; }
+    .red__line .red__line_in {
+        max-width: 935px;
+        margin: auto; }
+    .red__line h2 {
+        color: white;
+        line-height: 33px; }
+</style>
+<div class="insta__section">
+
+    <div class="red__line">
+        <div class="red__line_in">
+            <h2>Мы в Instagram</h2>
+        </div>
+    </div>
+    <div class="insta__container">
+        <div id="instagram-photos" class="instagram-photos"></div>
+    </div>
+</div>
+<script type='text/javascript' src='https://cdnjs.cloudflare.com/ajax/libs/jquery/1.7.2/jquery.min.js'></script>
+<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+<script>
+    const instagramRegExp = new RegExp(/<script type="text\/javascript">window\._sharedData = (.*);<\/script>/);
+
+    const fetchInstagramPhotos = async accountUrl => {
+        const response = await axios.get(accountUrl);
+        const json = JSON.parse(response.data.match(instagramRegExp)[1]);
+        const edges = json.entry_data.ProfilePage[0].graphql.user.edge_owner_to_timeline_media.edges.splice(0, 12);
+        console.log(edges)
+        return edges.map(({node}) => ({
+            url: `https://www.instagram.com/p/${node.shortcode}/`,
+            thumbnailUrl: node.thumbnail_src,
+            displayUrl: node.display_url,
+            likes: node.edge_media_preview_like.count,
+            comment: node.edge_media_to_comment.count,
+            caption: node.edge_media_to_caption.edges[0].node.text
+        }));
+    };
+
+    (async () => {
+        try {
+            const photos = await fetchInstagramPhotos('https://www.instagram.com/international.selling/');
+            const container = document.getElementById('instagram-photos');
+            photos.forEach(el => {
+                const a = document.createElement('a');
+                const v = `<div class="post_icons">
+    <ul>
+        <li>
+            <span class="inst-icon icon-like"></span>
+            <span class="inst-count">${el.likes}</span>
+        </li>
+        <li>
+            <span class="inst-icon icon-comment"></span>
+            <span class="inst-count">${el.comment}</span>
+        </li>
+    </ul>
+</div>
+`
+                const img = document.createElement('img');
+
+                a.setAttribute('href', el.url);
+                a.setAttribute('target', '_blank');
+                a.setAttribute('rel', 'noopener noreferrer');
+                a.classList.add('instagram-photo');
+
+                img.setAttribute('src', el.thumbnailUrl);
+                img.setAttribute('alt', el.caption);
+
+                a.appendChild(img);
+                a.insertAdjacentHTML("beforeend", v);
+                container.appendChild(a);
+            });
+        } catch (e) {
+            console.error('Fetching Instagram photos failed', e);
+        }
+    })();
+</script>
