@@ -179,10 +179,10 @@ var InstaParser = function () {
                     }
                 }))
             }))
-                switch (params.process){
+                switch (params.render){
                     case 'customFunction':
                         as.then( media=>{
-                                    params.processFunction(media.posts)
+                                    params.renderFunction(media.posts)
                             }
                         )
                         break;
