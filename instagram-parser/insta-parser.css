@@ -1,3 +1,4 @@
+
 .insta-parser-container {
     margin: auto;
  }
@@ -21,27 +22,33 @@
     box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.1);
     margin: 8px;
     position: relative;
+    width: -webkit-calc(33.333% - 24px);
     width: calc(33.333% - 24px);
 
 }
 
 .insta-col3 .instagram-photo{
+    width: -webkit-calc(33.333% - 24px);
     width: calc(33.333% - 24px);
 }
 .insta-col4 .instagram-photo{
+    width: -webkit-calc(25% - 24px);
     width: calc(25% - 24px);
 }
 
 @media screen and (max-width: 930px){
     .insta-col4 .instagram-photo{
+        width: -webkit-calc(33.333% - 24px);
         width: calc(33.333% - 24px);
     }
 }
 @media screen and (max-width: 576px){
     .insta-col4 .instagram-photo{
+        width: -webkit-calc(50% - 24px);
         width: calc(50% - 24px);
     }
     .insta-col3 .instagram-photo{
+        width: -webkit-calc(50% - 24px);
         width: calc(50% - 24px);
     }
 }
