@@ -25,8 +25,8 @@ addition properties:
     instagramParser.getMediaByLink({
         link:'https://www.instagram.com/international.selling/',
         postsCount:12,
-         process: 'customFunction',
-         processFunction: functionName(media)
+         render: 'customFunction',
+         renderFunction: functionName(media)
     });
  ```
  ```media = [{
