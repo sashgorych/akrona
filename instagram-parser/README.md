@@ -6,7 +6,7 @@
 ```<link rel="stylesheet" href="./css/insta-parser.css">```
 
 ---
-### using
+# usage
 #### html
 ```<div class="instagram-posts"></div> ```
 #### js
@@ -29,7 +29,9 @@ addition properties:
          renderFunction: functionName(media)
     });
  ```
- ```media = [{
+ In media var:
+ ``` 
+ media = [{
 caption: string  - post caption
 comment: number - comment count
 displayUrl: string
