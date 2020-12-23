@@ -16,6 +16,7 @@
         link:'https://www.instagram.com/international.selling/',
         postsCount:12,
         container: '.instagram-posts',
+        colInRow: 4
     });
 ```    
 addition properties:
