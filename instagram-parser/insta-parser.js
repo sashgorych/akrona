@@ -168,7 +168,7 @@ var InstaParser = function () {
                                         displayUrl: el.node.display_url,
                                         likes: el.node.edge_media_preview_like.count,
                                         comment: el.node.edge_media_to_comment.count,
-                                        caption: el.node.edge_media_to_caption.edges[0].node.text,
+                                        caption: el.node.edge_media_to_caption.edges[0]? el.node.edge_media_to_caption.edges[0].node.text: [],
                                         owner: el.node.owner,
                                         thumbnail_resources: el.node.thumbnail_resources
                                     }
