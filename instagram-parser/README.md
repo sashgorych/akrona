@@ -1,3 +1,5 @@
+
+
 ### js
 ```<script type='text/javascript' src='./js/insta-parser.js'></script>```
 ### style
@@ -5,6 +7,8 @@
 
 ---
 ### using
+#### html
+```<div class="instagram-posts"></div> ```
 #### js
 ```
  const instagramParser = new InstaParser();
@@ -26,5 +30,4 @@ addition properties:
     });
  ```
     
-#### html
-```<div class="instagram-posts"></div> ```
+
