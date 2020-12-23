@@ -6,7 +6,7 @@
 ```<link rel="stylesheet" href="./css/insta-parser.css">```
 
 ---
-### using
+# usage
 #### html
 ```<div class="instagram-posts"></div> ```
 #### js
