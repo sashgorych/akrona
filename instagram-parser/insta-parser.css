@@ -1,6 +1,10 @@
 .insta-parser-container {
     margin: auto;
-    max-width: 935px; }
+ }
+
+.insta-parser img{
+    width: 100%;
+}
 
 .insta-parser {
     display: -webkit-box;
@@ -15,21 +19,32 @@
     border: 4px solid #fff;
     -webkit-box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.1);
     box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.1);
-    -webkit-box-flex: 1;
-    -webkit-flex: 1 0 auto;
-    -ms-flex: 1 0 auto;
-    flex: 1 0 auto;
     margin: 8px;
     position: relative;
-    width: -webkit-calc(100% / 2 - (8px * 2));
-    width: calc(100% / 2 - (8px * 2));
-    max-width: 293px; }
+    width: calc(33.333% - 24px);
 
-@media only screen and (min-width: 768px) {
-    .insta-parser .instagram-photo {
-        width: -webkit-calc(100% / 4 - (8px * 2));
-        width: calc(100% / 4 - (8px * 2)); } }
+}
 
+.insta-col3 .instagram-photo{
+    width: calc(33.333% - 24px);
+}
+.insta-col4 .instagram-photo{
+    width: calc(25% - 24px);
+}
+
+@media screen and (max-width: 930px){
+    .insta-col4 .instagram-photo{
+        width: calc(33.333% - 24px);
+    }
+}
+@media screen and (max-width: 576px){
+    .insta-col4 .instagram-photo{
+        width: calc(50% - 24px);
+    }
+    .insta-col3 .instagram-photo{
+        width: calc(50% - 24px);
+    }
+}
 .insta-parser .instagram-photo:focus::after, .insta-parser .instagram-photo:hover::after {
     background: rgba(0, 0, 0, 0.5);
     bottom: 0;

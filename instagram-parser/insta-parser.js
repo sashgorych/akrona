@@ -179,6 +179,8 @@ var InstaParser = function () {
                     }
                 }))
             }))
+                let xcont = document.querySelector(params.container);
+
                 switch (params.render){
                     case 'customFunction':
                         as.then( media=>{
@@ -189,7 +191,6 @@ var InstaParser = function () {
                     default:
                         as.then( media=>{
                                 console.log(media)
-                                let xcont = document.querySelector(params.container);
                                 if (xcont) {
                                     xcont.classList.add('insta-parser-container')
                                     xcont.insertAdjacentHTML('beforeend',`<div class="insta-parser"></div>`)
@@ -199,6 +200,18 @@ var InstaParser = function () {
                                 }
                             }
                         )
+                }
+                switch (params.colInRow) {
+                    case 3:
+                        xcont.classList.add('insta-col3')
+                        break;
+                    case 4:
+                        xcont.classList.add('insta-col4')
+
+                        break;
+                    default:
+                        xcont.classList.add('insta-col3')
+
                 }
 
         },
