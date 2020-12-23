@@ -29,7 +29,9 @@ addition properties:
          renderFunction: functionName(media)
     });
  ```
- ```media = [{
+ In media var:
+ ``` 
+ media = [{
 caption: string  - post caption
 comment: number - comment count
 displayUrl: string
