@@ -35,19 +35,42 @@
     width: -webkit-calc(25% - 24px);
     width: calc(25% - 24px);
 }
-
+.insta-col5 .instagram-photo{
+    width: -webkit-calc(20% - 24px);
+    width: calc(20% - 24px);
+}
+.insta-col6 .instagram-photo{
+    width: -webkit-calc(16.66666666% - 24px);
+    width: calc(16.66666666% - 24px);
+}
 @media screen and (max-width: 930px){
     .insta-col4 .instagram-photo{
         width: -webkit-calc(33.333% - 24px);
         width: calc(33.333% - 24px);
     }
-}
+    .insta-col5 .instagram-photo{
+        width: -webkit-calc(25% - 24px);
+        width: calc(25% - 24px);
+    }
+    .insta-col6 .instagram-photo {
+        width: -webkit-calc(25% - 24px);
+        width: calc(25% - 24px);
+    }
+    }
 @media screen and (max-width: 576px){
     .insta-col4 .instagram-photo{
         width: -webkit-calc(50% - 24px);
         width: calc(50% - 24px);
     }
     .insta-col3 .instagram-photo{
+        width: -webkit-calc(50% - 24px);
+        width: calc(50% - 24px);
+    }
+    .insta-col5 .instagram-photo{
+        width: -webkit-calc(50% - 24px);
+        width: calc(50% - 24px);
+    }
+    .insta-col6 .instagram-photo {
         width: -webkit-calc(50% - 24px);
         width: calc(50% - 24px);
     }
