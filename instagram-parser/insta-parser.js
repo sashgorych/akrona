@@ -149,7 +149,9 @@ var InstaParser = function () {
         },
             instagramRegExp.prototype.getMediaByLink = function (params) {
             let e = parseUsernameURL(params.link)
-            var i, l, a;
+                showLoad(params.container);
+
+                var i, l, a;
             let as = n(this, void 0, void 0, (function () {
                 var n, u, s, c;
                 return o(this, (function (o) {
@@ -195,7 +197,7 @@ var InstaParser = function () {
                                     xcont.classList.add('insta-parser-container')
                                     xcont.insertAdjacentHTML('beforeend',`<div class="insta-parser"></div>`)
                                     let cont = xcont.querySelector('.insta-parser')
-
+                                    hideLoad()
                                     insertInDomInstaPosts(media.posts,cont)
                                 }
                             }
@@ -211,6 +213,12 @@ var InstaParser = function () {
             instagramRegExp
     }()
 }();
+function showLoad(container) {
+   document.querySelector(container).innerHTML = "<center class='load_insta_posts'><img style='width: 20px; height: 20px;margin: 30px;' src='/images/loading.gif' alt='load'></center>"
+}
+function hideLoad(container) {
+   document.querySelector('.load_insta_posts').remove();
+}
 function insertInDomInstaPosts(posts,container) {
     posts.forEach(el => {
         const a = document.createElement('a');
