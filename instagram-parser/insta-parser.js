@@ -201,16 +201,9 @@ var InstaParser = function () {
                             }
                         )
                 }
-                switch (params.colInRow) {
-                    case 3:
-                        xcont.classList.add('insta-col3')
-                        break;
-                    case 4:
-                        xcont.classList.add('insta-col4')
-
-                        break;
-                    default:
-                        xcont.classList.add('insta-col3')
+                if (params.colInRow) {
+                    let cClass = 'insta-col'+ params.colInRow
+                        xcont.classList.add(cClass)
 
                 }
 
