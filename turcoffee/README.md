@@ -312,13 +312,18 @@
 # Авторизація
 
 Для пк і моб. різні блоки. В пк версії - блок в хедері. В моб версії - блок в меню.
+
 Пк версія:
-до ``` <div class="auth"></div> ``` додається клас authorized щоб вийшло ``` <div class="auth authorized"></div> ```
+до ``` <div class="auth"></div> ``` додається клас authorized щоб вийшло ```<div class="auth authorized"></div> ```
+
 В оновленій версії в цьому діві є ``` <div class="authorized__block"> ``` в ньому розмітка для авторизованого юзера.
+
+
 В ```<div class="user__status__block">``` є  data-percent="50" - сюди вписується прогрес акаунту (клієнт - партнер - ...)  у % 
 
-Моб. версія.``
-В меню є  ```<div class="menu-main-top-auth">``` До нього додаэться клас authorized щоб вийшло   ```<div class="menu-main-top-auth authorized">```
+Моб. версія.
+В меню є  ```<div class="menu-main-top-auth">``` До нього додається клас authorized щоб вийшло   ```<div class="menu-main-top-auth authorized">```
+
 Далі все так само як на пк.
 
 
