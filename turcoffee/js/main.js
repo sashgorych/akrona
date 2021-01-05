@@ -101,6 +101,7 @@ $('.side-menu__bg').click(function (e) {
     hideDarkMenuBg();
     unlockBg();
     hideMobileSearchBlock()
+    hidePopup();
 
 })
 
@@ -112,6 +113,59 @@ $('.menu').click(function (e) {
 })
 
 //for menu end-----------------------------------------
+
+//auth start
+$('.user__name').hover(function (e) {
+    showAuthMenu()
+    hideProgressPopup()
+})
+$('.user__photo').hover(function (e) {
+    showAuthMenu()
+    hideProgressPopup()
+})
+$('.user__progress_bar_block').hover(function (e) {
+    if(!isAuthMenuOpen()){
+        showProgressPopup()
+        hideAuthMenu()
+    }
+})
+$('.user__progress_bar_block .icon-close').click(function (e) {
+    hideProgressPopup()
+})
+$('.auth__menu  .icon-close').click(function (e) {
+    hideAuthMenu()
+})
+function isAuthMenuOpen(){
+    return $('.auth__menu').hasClass('active')
+}
+function showAuthMenu(){
+    $('.auth__menu').addClass('active')
+}
+function hideAuthMenu(){
+    $('.auth__menu').removeClass('active')
+}
+function showProgressPopup(){
+    $('.user__progress__popup').addClass('active')
+}
+function hideProgressPopup(){
+    $('.user__progress__popup').removeClass('active')
+}
+setProgresBar(+document.querySelector('.user__status__block').dataset.percent)
+function setProgresBar(percent) {
+    let w = 0;
+    if (screen.width > 900) {
+         w = 200 * +percent / 100;
+        $('body').append('<style>.user__progress_bar:after{width: ' + w + 'px;}</style>');
+
+    }else{
+         w = +percent;
+        $('body').append('<style>.user__progress_bar:after{width: ' + w + '%;}</style>');
+
+
+    }
+
+}
+//auth end
 
 
 //search start ----------------------------------------
@@ -134,13 +188,11 @@ $('.mobile-search').click(function (e) {
     hideMainMenu()
     showMobileSearchBlock()
 })
-$('.search').click(function (e) {
-    if(screen.width<576) {
+$('.search-btn').click(function (e) {
         e.preventDefault()
         showDarkMenuBg();
         lockBg();
         showMobileSearchBlock()
-    }
 })
 //mobile search block.make search btn click.
 $('.search-mobile-form-input-btn').click(function (e) {
@@ -209,7 +261,9 @@ if (document.querySelector('.products-slider')) {
                 breakpoint: 576,
                 settings: {
                     slidesToShow: 1,
-                    slidesToScroll: 1
+                    slidesToScroll: 1,
+                    centerMode: true,
+                    centerPadding: 'calc(100% - 310px)',
                 }
             }
         ]
@@ -305,6 +359,19 @@ $('.current-language').click(function (e) {
 
     }
 })
+let authCloseTimer;
+$('.auth').mouseover(function (e) {
+    clearTimeout(authCloseTimer);
+
+})
+$('.auth').mouseleave(function (e) {
+    clearTimeout(authCloseTimer);
+    authCloseTimer = setTimeout(function (e) {
+        hideAuthMenu()
+        hideProgressPopup()
+    },200)
+
+})
 $(document).click(function (e) {
     //language block when click outside
     let language = $(".language");
@@ -316,6 +383,19 @@ $(document).click(function (e) {
     let selected__method = $(".selected__method");
     if (!selected__method.is(e.target) && selected__method.has(e.target).length === 0 && screen.width>576) {
         $('.method__list').removeClass('active')
+    }
+    //auth block
+    let auth__menu = $(".auth__menu");
+    let user__data = $(".user__data");
+    if (!auth__menu.is(e.target) && auth__menu.has(e.target).length === 0 &&
+        !user__data.is(e.target) && user__data.has(e.target).length === 0) {
+       hideAuthMenu()
+        console.log('sasas')
+    }
+    //auth block
+    let progressPopup = $(".user__progress_bar_block");
+    if (!progressPopup.is(e.target) && progressPopup.has(e.target).length === 0) {
+        hideProgressPopup()
     }
 })
 $(document).on('click', '.minus', function (e) {
@@ -696,4 +776,65 @@ if (document.querySelector('.video')) {
 
 
 //# sourceMappingURL=main.js.map
+
+
+var doc = document.documentElement;
+var w = window;
+var prevScroll = w.scrollY || doc.scrollTop;
+var curScroll;
+var direction = 0;
+var prevDirection = 0;
+
+var checkScroll = function () {
+    curScroll = w.scrollY || doc.scrollTop;
+
+
+    if (curScroll > prevScroll) {
+        //scrolled up
+        direction = 2;
+    }
+    else if (curScroll < prevScroll) {
+        //scrolled down
+        direction = 1;
+    }
+    if(curScroll > 500){
+        showProductAltMenu()
+    }else{
+        hideProductAltMenu()
+
+    }
+
+    prevScroll = curScroll;
+};
+window.addEventListener('scroll', checkScroll);
+function showProductAltMenu() {
+    $('.alt-product-menu').addClass('active')
+}
+function hideProductAltMenu() {
+    $('.alt-product-menu').removeClass('active')
+}
+
+//cart page
+$('.draw_up_order').click(function (e) {
+    e.preventDefault();
+    showOrderPopup()
+})
+
+function showOrderPopup(){
+    $('.order_popup').addClass('active')
+    showDarkMenuBg()
+    lockBg()
+}
+function hidePopup(){
+    $('.default_popup').removeClass('active')
+}
+$('.popup_close').click(function () {
+    hidePopup();
+    unlockBg();
+    hideDarkMenuBg()
+})
+
+$('.title-line-block-text-text').click(function () {
+    $('.cart').toggleClass('new')
+})
 //# sourceMappingURL=main.js.map

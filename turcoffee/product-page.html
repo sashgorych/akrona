@@ -39,11 +39,51 @@
                     </div>
 
                 </div>
-                <div class="auth">
+                <div class="auth authorized">
                     <img src="./images/icons/entry.svg" alt="entry">
                     <div class="auth-block">
                         <a href="">Вхід</a>
                         <a href="">Реєстрація</a>
+                    </div>
+                    <div class="authorized__block">
+                        <div class="user__status__block" data-percent="50">
+                            <div class="user__progress_bar_block">
+                                <div class="user__progress_bar">
+                                </div>
+                                <span>Клієнт</span>
+                                <div class="user__progress__popup">
+                                    <div class="icon-close"><span></span></div>
+
+                                    <div class="triangle-left">
+                                    </div>
+                                    <div class="user__progress__popup_content">
+                                        <span>Наберіть 6000 грн. щоб перейти на рівень "партнер"</span>
+                                        <p>Залишилося 3000грн. (50%)</p>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                        </div>
+                        <div class="user__data">
+                            <div class="user__name"><span>Іван Іванович</span></div>
+                            <div class="user__photo"><div class="user__photo_in"><img src="./images/default-images/user_avatars.svg" alt=""></div></div>
+                        </div>
+                        <div class="auth__menu">
+                            <div class="icon-close"><span></span></div>
+
+                            <div class="triangle-left">
+                            </div>
+                            <ul>
+                                <li><a href="">Мій профіль</a></li>
+                                <li><a href="">Додати користувача</a></li>
+                                <li><a href="">Мої партнери</a></li>
+                                <li><a href="">Облік ТО і нарахувань</a></li>
+                                <li><a href="">Особистий кабінет</a></li>
+                                <li><a href="">Історія замовлень</a></li>
+                                <li><a href="">Вихід</a></li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -65,7 +105,16 @@
                         <ul>
                             <li><a href="">КАВОВАРКИ</a></li>
                             <li><a href="">ТЕХНІКА ARZUM</a></li>
-                            <li><a href="">КАВА</a></li>
+                            <li>
+                                <a href="">КАВА</a>
+                                <div class="submenu">
+                                    <div class="triangle-left"></div>
+                                    <ul>
+                                        <li><a href="">Зернова</a></li>
+                                        <li><a href="">Мелена</a></li>
+                                    </ul>
+                                </div>
+                            </li>
                             <li><a href="">ПОСУД</a></li>
                             <li><a href="">КАКАО ТА ВЕРШКИ</a></li>
                             <li><a href="">СОЛОДОЩІ</a></li>
@@ -105,6 +154,7 @@
                             <a href="" class="search-mobile-form-input-clear">
                                 <div class="icon-close"><span></span></div>
                             </a>
+                            <button class="product__show__more custom-button__white">Шукати</button>
                             <a href="" class="search-mobile-form-input-btn">
                                 <img src="./images/icons/zoom.svg" alt="zoom">
                             </a>
@@ -137,9 +187,48 @@
                         </div>
                         <img src="./images/footer/logo_footer.svg" class="menu-logo" alt="Turcoffee logo">
                         <div class="menu-mob act"><span></span></div>
-                        <div class="menu-main-top-auth">
+                        <div class="menu-main-top-auth authorized">
                             <a href="" class="custom-link">Вхід</a>
                             <a href="" class="custom-link">Реєстрація</a>
+                            <div class="authorized__block">
+                                <div class="user__status__block" data-percent="50">
+                                    <div class="user__progress_bar_block">
+                                        <div class="user__progress_bar">
+                                        </div>
+                                        <span>Клієнт</span>
+                                        <div class="user__progress__popup">
+                                            <div class="icon-close"><span></span></div>
+                                            <div class="triangle-left">
+                                            </div>
+                                            <div class="user__progress__popup_content">
+                                                <span>Наберіть 6000 грн. щоб перейти на рівень "партнер"</span>
+                                                <p>Залишилося 3000грн. (50%)</p>
+                                            </div>
+                                        </div>
+
+                                    </div>
+
+                                </div>
+                                <div class="user__data">
+                                    <div class="user__name"><span>Іван Іванович</span></div>
+                                    <div class="user__photo"><div class="user__photo_in"><img src="./images/default-images/user_avatars.svg" alt=""></div></div>
+                                </div>
+                                <div class="auth__menu">
+                                    <div class="icon-close"><span></span></div>
+
+                                    <div class="triangle-left">
+                                    </div>
+                                    <ul>
+                                        <li><a href="">Мій профіль</a></li>
+                                        <li><a href="">Додати користувача</a></li>
+                                        <li><a href="">Мої партнери</a></li>
+                                        <li><a href="">Облік ТО і нарахувань</a></li>
+                                        <li><a href="">Особистий кабінет</a></li>
+                                        <li><a href="">Історія замовлень</a></li>
+                                        <li><a href="">Вихід</a></li>
+                                    </ul>
+                                </div>
+                            </div>
                         </div>
                     </div>
                     <div class="menu-main-content">
@@ -209,13 +298,65 @@
             <li class="slash">/</li>
             <li><a href="">Каталог</a></li>
             <li class="slash">/</li>
-            <li><span>Техніка Arzumv Каталог</span></li>
+            <li><span>Техніка Arzum Каталог</span></li>
 
         </ul>
     </div>
 </section>
 
+
+
+
+
 <section class="product-page discount">
+    <div class="alt-product-menu">
+        <div class="container-block">
+            <div class="product_img_thumb">
+                <div class="product_img_thumb_in">
+                <img src="./images/temp/product-item500x500.jpg" alt="">
+                </div>
+            </div>
+                <div class="alt_cont">
+                    <div class="alt-left">
+                        <h2 class="title-line-block-text-text">Arzum OKKA Minio OK004-D(Орхідея)</h2>
+                        <div class="products__links">
+                            <a href="#description">Опис</a>
+                            <a href="#characteristic">Характеристики</a>
+                            <a href="#reviews">Відгуки (<span>10</span>)</a>
+                        </div>
+                    </div>
+                    <div class="alt-right">
+                        <div class="product__part2">
+                            <div class="product__price-counter">
+                                <div class="product-prices">
+                                    <p class="product-price">182 <span>₴</span></p>
+                                    <div class="product-price-old">
+                                        <div class="product-price-old-container">
+                                            <p>210 <span>грн</span>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="product__price-counter_btns">
+                                    <div class="counter">
+                                        <button class="minus" tabindex="0">-</button>
+                                        <input type="text" id="" value="1" name="" data-step="1" inputmode="numeric" tabindex="0">
+                                        <button class="plus" tabindex="0">+</button>
+                                    </div>
+                                    <button class="btn_add_to_cart">Додати в кошик</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="set-favourite">
+                            <a href="" class="" tabindex="0"></a>
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+        </div>
+
     <div class="container-block">
         <div class="product-page__lf">
         <div class="product__part1">
@@ -225,7 +366,7 @@
                         <span class="new-stock_text">new</span>
                         <span class="new-discount_text">Знижка</span>
                     </div>
-                    <h2 class="title-line-block-text-text">Arzumv OKKA Minio OK004-D(Орхідея)</h2>
+                    <h2 class="title-line-block-text-text">Arzum OKKA Minio OK004-D(Орхідея)</h2>
                 </div>
                 <div class="title-line-block-line"></div>
                 <div class="set-favourite">
@@ -245,7 +386,7 @@
             </div>
             <div class="products__links mobile-flex">
                 <a href="#description">Опис</a>
-                <a href="#characteristic">Характеристика</a>
+                <a href="#characteristic">Характеристики</a>
                 <a href="#reviews">Відгуки (<span>10</span>)</a>
             </div>
 
@@ -308,7 +449,7 @@
             </div>
             <div class="products__links">
                 <a href="#description">Опис</a>
-                <a href="#characteristic">Характеристика</a>
+                <a href="#characteristic">Характеристики</a>
                 <a href="#reviews">Відгуки (<span>10</span>)</a>
             </div>
             </div>
@@ -622,7 +763,7 @@
         </div>
     </div>
     <div class="line-red">
-        <div class="container-block"><p>All rights reserved. Copyright 2020г</p>
+        <div class="container-block"><p>© 2020 Інтернет-магазин Turcoffee</p>
         </div>
     </div>
 </section>

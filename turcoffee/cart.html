@@ -1,0 +1,1014 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="copyright" content="">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <title></title>
+    <link rel="icon" href="./images/fav.png">
+    <link rel="stylesheet" href="./css/slick-lightbox.css">
+    <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.min.css">
+    <link
+            rel="stylesheet"
+            href="https://unpkg.com/tippy.js@6/themes/light.css"
+    />
+    <!--<link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">-->
+</head>
+<body class="">
+<div class="layout layout-menu-opened-overflow">
+    <section class="header">
+        <div class="header-top-line">
+            <div class="container-block">
+                <div class="language">
+                    <div class="current-language">
+                        <img src="./images/icons/mang.svg" alt="lang">
+                        <div class="selected-language">
+                            <span>Україна</span>
+                        </div>
+                    </div>
+                    <div class="language-list">
+                        <div class="triangle-left"></div>
+
+                        <a href="">English</a>
+                        <a href="">Русский</a>
+                    </div>
+
+                </div>
+                <div class="auth authorized">
+                    <img src="./images/icons/entry.svg" alt="entry">
+                    <div class="auth-block">
+                        <a href="">Вхід</a>
+                        <a href="">Реєстрація</a>
+                    </div>
+                    <div class="authorized__block">
+                        <div class="user__status__block" data-percent="50">
+                            <div class="user__progress_bar_block">
+                                <div class="user__progress_bar">
+                                </div>
+                                <span>Клієнт</span>
+                                <div class="user__progress__popup">
+                                    <div class="icon-close"><span></span></div>
+
+                                    <div class="triangle-left">
+                                    </div>
+                                    <div class="user__progress__popup_content">
+                                        <span>Наберіть 6000 грн. щоб перейти на рівень "партнер"</span>
+                                        <p>Залишилося 3000грн. (50%)</p>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                        </div>
+                        <div class="user__data">
+                            <div class="user__name"><span>Іван Іванович</span></div>
+                            <div class="user__photo"><div class="user__photo_in"><img src="./images/default-images/user_avatars.svg" alt=""></div></div>
+                        </div>
+                        <div class="auth__menu">
+                            <div class="icon-close"><span></span></div>
+
+                            <div class="triangle-left">
+                            </div>
+                            <ul>
+                                <li><a href="">Мій профіль</a></li>
+                                <li><a href="">Додати користувача</a></li>
+                                <li><a href="">Мої партнери</a></li>
+                                <li><a href="">Облік ТО і нарахувань</a></li>
+                                <li><a href="">Особистий кабінет</a></li>
+                                <li><a href="">Історія замовлень</a></li>
+                                <li><a href="">Вихід</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="header-bottom-line">
+            <div class="container-block">
+
+                <div class="menu">
+                    <div class="menu-toggle-btn">
+                        <div class="menu-mob"><span></span></div>
+                        <p>Меню</p>
+                    </div>
+                </div>
+                <div class="quick-navigation">
+                    <div class="logo">
+                        <a href=""><img src="./images/logo.svg" alt="turcoffee"></a>
+                    </div>
+                    <div class="quick-navigation-list">
+                        <ul>
+                            <li><a href="">КАВОВАРКИ</a></li>
+                            <li><a href="">ТЕХНІКА ARZUM</a></li>
+                            <li>
+                                <a href="">КАВА</a>
+                                <div class="submenu">
+                                    <div class="triangle-left"></div>
+                                    <ul>
+                                        <li><a href="">Зернова</a></li>
+                                        <li><a href="">Мелена</a></li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li><a href="">ПОСУД</a></li>
+                            <li><a href="">КАКАО ТА ВЕРШКИ</a></li>
+                            <li><a href="">СОЛОДОЩІ</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="tools">
+                    <a href="" class="bucket">
+                        <div class="bucket-img">
+                            <div class="bucket-amount">
+                                <span>99</span>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="" class="fav">
+                        <span class="fav-img"></span>
+                    </a>
+                    <div class="search">
+                        <div class="search-in">
+                            <a href="" class="search-btn">
+                            </a>
+                            <input type="text" placeholder="Пошук" id="search-pc-str">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="menu-main">
+            <div class="menu-main-container">
+                <div class="search-mobile-form">
+                    <div class="search-mobile-form-in">
+                        <div class="search-mobile-form-close">
+                            <div class="icon-close"><span></span></div>
+                        </div>
+                        <div class="search-mobile-form-input">
+                            <input type="text" placeholder="Напишіть те, що хочете знайти" id="search-mobile">
+                            <a href="" class="search-mobile-form-input-clear">
+                                <div class="icon-close"><span></span></div>
+                            </a>
+                            <button class="product__show__more custom-button__white">Шукати</button>
+                            <a href="" class="search-mobile-form-input-btn">
+                                <img src="./images/icons/zoom.svg" alt="zoom">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="menu-main-container-in">
+                    <div class="menu-main-top">
+                        <div class="mobile-tools">
+                            <div class="language">
+                                <div class="current-language">
+                                    <img src="./images/icons/mang.svg" alt="lang">
+                                    <div class="selected-language">
+                                        <span>Україна</span>
+                                    </div>
+                                </div>
+                                <div class="language-list">
+                                    <div class="triangle-left"></div>
+
+                                    <a href="">English</a>
+                                    <a href="">Русский</a>
+                                </div>
+
+                            </div>
+                            <div class="mobile-search">
+                                <img src="./images/icons/zoom.svg" alt="zoom">
+                                <p>Пошук</p>
+
+                            </div>
+                        </div>
+                        <img src="./images/footer/logo_footer.svg" class="menu-logo" alt="Turcoffee logo">
+                        <div class="menu-mob act"><span></span></div>
+                        <div class="menu-main-top-auth authorized">
+                            <a href="" class="custom-link">Вхід</a>
+                            <a href="" class="custom-link">Реєстрація</a>
+                            <div class="authorized__block">
+                                <div class="user__status__block" data-percent="50">
+                                    <div class="user__progress_bar_block">
+                                        <div class="user__progress_bar">
+                                        </div>
+                                        <span>Клієнт</span>
+                                        <div class="user__progress__popup">
+                                            <div class="icon-close"><span></span></div>
+                                            <div class="triangle-left">
+                                            </div>
+                                            <div class="user__progress__popup_content">
+                                                <span>Наберіть 6000 грн. щоб перейти на рівень "партнер"</span>
+                                                <p>Залишилося 3000грн. (50%)</p>
+                                            </div>
+                                        </div>
+
+                                    </div>
+
+                                </div>
+                                <div class="user__data">
+                                    <div class="user__name"><span>Іван Іванович</span></div>
+                                    <div class="user__photo"><div class="user__photo_in"><img src="./images/default-images/user_avatars.svg" alt=""></div></div>
+                                </div>
+                                <div class="auth__menu">
+                                    <div class="icon-close"><span></span></div>
+
+                                    <div class="triangle-left">
+                                    </div>
+                                    <ul>
+                                        <li><a href="">Мій профіль</a></li>
+                                        <li><a href="">Додати користувача</a></li>
+                                        <li><a href="">Мої партнери</a></li>
+                                        <li><a href="">Облік ТО і нарахувань</a></li>
+                                        <li><a href="">Особистий кабінет</a></li>
+                                        <li><a href="">Історія замовлень</a></li>
+                                        <li><a href="">Вихід</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="menu-main-content">
+                        <ul>
+                            <li class="unit-toggle has-toggle">
+                                <div class="unit-toggle-span">
+                                    <span class="unit-title">Каталог</span>
+                                    <span class="unit-toggle__icon "></span>
+                                </div>
+                                <div class="submenu-list">
+                                    <a href="">Кавоварки</a>
+                                    <a href="">Техніка Arzum</a>
+                                    <a href="">Зернова кава</a>
+                                    <a href="">Мелена кава</a>
+                                    <a href="">Какао та шоколад</a>
+                                    <a href="">Інша продукція</a>
+                                    <a href="">Східні солодощі</a>
+                                    <a href="">Посуд</a>
+                                    <a href="">Витратні матеріали</a>
+                                    <a href="">Сувенірна продукція</a>
+                                </div>
+                            </li>
+                            <li>
+                                <a href="">Новинки</a>
+                            </li>
+                            <li>
+                                <a href="">Акції</a>
+                            </li>
+                            <li>
+                                <a href="">Про нас</a>
+
+                            </li>
+                            <li>
+                                <a href="">Бізнес з Turcoffee</a>
+                            </li>
+                            <li>
+                                <a href="">Блог</a>
+                            </li>
+                            <li>
+                                <a href="">Контакти</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="menu-main-bottom">
+                        <p>Приєднуйтесь до нас</p>
+                        <div class="socials-icons">
+                            <a href=""><img src="./images/icons/facebook.svg" alt="facebook"></a>
+                            <a href=""><img src="./images/icons/twitter.svg" alt="twitter"></a>
+                            <a href=""><img src="./images/icons/insta_.png" alt="instagram"></a>
+                            <a href=""><img src="./images/icons/youtube.svg" alt="youtube"></a>
+                            <a href=""><img src="./images/icons/telegram.svg" alt="telegram"></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="side-menu__bg">
+
+            </div>
+        </div>
+    </section>
+
+<section class="breadcrumb">
+    <div class="container-block">
+
+        <ul>
+            <li><a href="">Головна</a></li>
+            <li class="slash">/</li>
+            <li><span>Кошик</span></li>
+
+        </ul>
+    </div>
+</section>
+<section class="cart">
+    <div class="container-block">
+        <div class="title-line-block">
+            <div class="title-line-block-text">
+                <h3 class="title-line-block-text-text">
+                    Кошик</h3>
+            </div>
+            <div class="title-line-block-line"></div>
+        </div>
+        <div class="cart_content">
+            <div class="cart_top_btns">
+                <a href="" class="custom-button__white repeat_order_btn">Повторити замовлення</a>
+                <a href="" class="custom-button__white pickup_stocks_btn">Підібрати по акціях</a>
+            </div>
+            <div class="cart_stocks_container hidden-object">
+<div class="products-container products-slider">
+    <div class="item pr__origin discount">
+            <div class="item-wr">
+                <div class="stocks">
+                    <span class="new-stock_text">new</span>
+                    <span class="new-discount_text">Знижка</span>
+                </div>
+                <div class="set-favourite">
+                    <a href="" class=""></a>
+                </div>
+                <div class="img">
+                    <a href="">
+                        <img src="./images/temp/product-img.jpg" alt="">
+                    </a>
+                </div>
+                <p class="item-title">
+                    <a href="" title="" tabindex="0">Кава мелена Elite</a>
+                </p>
+                <div class="middle-block">
+                    <div class="rating" data-rate="50">
+                        <span class="rateStarPopup active"></span>
+                        <span class="rateStarPopup active"></span>
+                        <span class="rateStarPopup active50"></span>
+                        <span class="rateStarPopup"></span>
+                        <span class="rateStarPopup"></span>
+                    </div>
+        
+                </div>
+                <div class="not-available-block">
+                    <p>немає в наявності</p>
+                    <a href="">Повідомити про наявність</a>
+                </div>
+                <div class="item-kinds colors">
+                    <a href="" class="state-active"><span style="background: #979A9A"></span></a>
+                </div>
+                <div class="item-kinds weights">
+                    <a href="" class=""><span>0.1 кг</span></a>
+                    <a href="" class=""><span>0.25 кг</span></a>
+                    <a href="" class="state-active"><span>1 кг</span></a>
+                </div>
+        
+                <div class="bottom-block">
+                    <div class="product-counter-prices">
+                        <div class="counter">
+                            <button class="minus" tabindex="0">-</button>
+                            <input type="text" id="" value="1" name="" data-step="1" inputmode="numeric" tabindex="0">
+                            <button class="plus" tabindex="0">+</button>
+                        </div>
+                        <div class="product-prices">
+                            <p class="product-price">182 <span>грн</span></p>
+                            <div class="product-price-old">
+                                <div class="product-price-old-container">
+                                    <p>210 <span>грн</span>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="add-to-cart"><img src="./images/icons/basket_white_buy.svg" alt="cart">
+                    </button>
+                </div>
+                <button class="make-order">Замовити</button>
+        
+            </div>
+    </div>
+    <div class="item pr__weight not-available">
+            <div class="item-wr">
+                <div class="stocks">
+                    <span class="new-stock_text">new</span>
+                    <span class="new-discount_text">Знижка</span>
+                </div>
+                <div class="set-favourite">
+                    <a href="" class=""></a>
+                </div>
+                <div class="img">
+                    <a href="">
+                        <img src="./images/temp/product-img.jpg" alt="">
+                    </a>
+                </div>
+                <p class="item-title">
+                    <a href="" title="" tabindex="0">Кава мелена Elite</a>
+                </p>
+                <div class="middle-block">
+                    <div class="rating" data-rate="50">
+                        <span class="rateStarPopup active"></span>
+                        <span class="rateStarPopup active"></span>
+                        <span class="rateStarPopup active50"></span>
+                        <span class="rateStarPopup"></span>
+                        <span class="rateStarPopup"></span>
+                    </div>
+        
+                </div>
+                <div class="not-available-block">
+                    <p>немає в наявності</p>
+                    <a href="">Повідомити про наявність</a>
+                </div>
+                <div class="item-kinds colors">
+                    <a href="" class="state-active"><span style="background: #979A9A"></span></a>
+                </div>
+                <div class="item-kinds weights">
+                    <a href="" class=""><span>0.1 кг</span></a>
+                    <a href="" class=""><span>0.25 кг</span></a>
+                    <a href="" class="state-active"><span>1 кг</span></a>
+                </div>
+        
+                <div class="bottom-block">
+                    <div class="product-counter-prices">
+                        <div class="counter">
+                            <button class="minus" tabindex="0">-</button>
+                            <input type="text" id="" value="1" name="" data-step="1" inputmode="numeric" tabindex="0">
+                            <button class="plus" tabindex="0">+</button>
+                        </div>
+                        <div class="product-prices">
+                            <p class="product-price">182 <span>грн</span></p>
+                            <div class="product-price-old">
+                                <div class="product-price-old-container">
+                                    <p>210 <span>грн</span>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="add-to-cart"><img src="./images/icons/basket_white_buy.svg" alt="cart">
+                    </button>
+                </div>
+                <button class="make-order">Замовити</button>
+        
+            </div>
+    </div>
+    <div class="item pr__colors">
+            <div class="item-wr">
+                <div class="stocks">
+                    <span class="new-stock_text">new</span>
+                    <span class="new-discount_text">Знижка</span>
+                </div>
+                <div class="set-favourite">
+                    <a href="" class=""></a>
+                </div>
+                <div class="img">
+                    <a href="">
+                        <img src="./images/temp/product-img.jpg" alt="">
+                    </a>
+                </div>
+                <p class="item-title">
+                    <a href="" title="" tabindex="0">Кава мелена Elite</a>
+                </p>
+                <div class="middle-block">
+                    <div class="rating" data-rate="50">
+                        <span class="rateStarPopup active"></span>
+                        <span class="rateStarPopup active"></span>
+                        <span class="rateStarPopup active50"></span>
+                        <span class="rateStarPopup"></span>
+                        <span class="rateStarPopup"></span>
+                    </div>
+        
+                </div>
+                <div class="not-available-block">
+                    <p>немає в наявності</p>
+                    <a href="">Повідомити про наявність</a>
+                </div>
+                <div class="item-kinds colors">
+                    <a href="" class="state-active"><span style="background: #979A9A"></span></a>
+                </div>
+                <div class="item-kinds weights">
+                    <a href="" class=""><span>0.1 кг</span></a>
+                    <a href="" class=""><span>0.25 кг</span></a>
+                    <a href="" class="state-active"><span>1 кг</span></a>
+                </div>
+        
+                <div class="bottom-block">
+                    <div class="product-counter-prices">
+                        <div class="counter">
+                            <button class="minus" tabindex="0">-</button>
+                            <input type="text" id="" value="1" name="" data-step="1" inputmode="numeric" tabindex="0">
+                            <button class="plus" tabindex="0">+</button>
+                        </div>
+                        <div class="product-prices">
+                            <p class="product-price">182 <span>грн</span></p>
+                            <div class="product-price-old">
+                                <div class="product-price-old-container">
+                                    <p>210 <span>грн</span>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="add-to-cart"><img src="./images/icons/basket_white_buy.svg" alt="cart">
+                    </button>
+                </div>
+                <button class="make-order">Замовити</button>
+        
+            </div>
+
+    </div>
+    <div class="item pr__weight">
+            <div class="item-wr">
+                <div class="stocks">
+                    <span class="new-stock_text">new</span>
+                    <span class="new-discount_text">Знижка</span>
+                </div>
+                <div class="set-favourite">
+                    <a href="" class=""></a>
+                </div>
+                <div class="img">
+                    <a href="">
+                        <img src="./images/temp/product-img.jpg" alt="">
+                    </a>
+                </div>
+                <p class="item-title">
+                    <a href="" title="" tabindex="0">Кава мелена Elite</a>
+                </p>
+                <div class="middle-block">
+                    <div class="rating" data-rate="50">
+                        <span class="rateStarPopup active"></span>
+                        <span class="rateStarPopup active"></span>
+                        <span class="rateStarPopup active50"></span>
+                        <span class="rateStarPopup"></span>
+                        <span class="rateStarPopup"></span>
+                    </div>
+        
+                </div>
+                <div class="not-available-block">
+                    <p>немає в наявності</p>
+                    <a href="">Повідомити про наявність</a>
+                </div>
+                <div class="item-kinds colors">
+                    <a href="" class="state-active"><span style="background: #979A9A"></span></a>
+                </div>
+                <div class="item-kinds weights">
+                    <a href="" class=""><span>0.1 кг</span></a>
+                    <a href="" class=""><span>0.25 кг</span></a>
+                    <a href="" class="state-active"><span>1 кг</span></a>
+                </div>
+        
+                <div class="bottom-block">
+                    <div class="product-counter-prices">
+                        <div class="counter">
+                            <button class="minus" tabindex="0">-</button>
+                            <input type="text" id="" value="1" name="" data-step="1" inputmode="numeric" tabindex="0">
+                            <button class="plus" tabindex="0">+</button>
+                        </div>
+                        <div class="product-prices">
+                            <p class="product-price">182 <span>грн</span></p>
+                            <div class="product-price-old">
+                                <div class="product-price-old-container">
+                                    <p>210 <span>грн</span>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="add-to-cart"><img src="./images/icons/basket_white_buy.svg" alt="cart">
+                    </button>
+                </div>
+                <button class="make-order">Замовити</button>
+        
+            </div>
+
+    </div>
+    <div class="item pr__colors not-available">
+            <div class="item-wr">
+                <div class="stocks">
+                    <span class="new-stock_text">new</span>
+                    <span class="new-discount_text">Знижка</span>
+                </div>
+                <div class="set-favourite">
+                    <a href="" class=""></a>
+                </div>
+                <div class="img">
+                    <a href="">
+                        <img src="./images/temp/product-img.jpg" alt="">
+                    </a>
+                </div>
+                <p class="item-title">
+                    <a href="" title="" tabindex="0">Кава мелена Elite</a>
+                </p>
+                <div class="middle-block">
+                    <div class="rating" data-rate="50">
+                        <span class="rateStarPopup active"></span>
+                        <span class="rateStarPopup active"></span>
+                        <span class="rateStarPopup active50"></span>
+                        <span class="rateStarPopup"></span>
+                        <span class="rateStarPopup"></span>
+                    </div>
+        
+                </div>
+                <div class="not-available-block">
+                    <p>немає в наявності</p>
+                    <a href="">Повідомити про наявність</a>
+                </div>
+                <div class="item-kinds colors">
+                    <a href="" class="state-active"><span style="background: #979A9A"></span></a>
+                </div>
+                <div class="item-kinds weights">
+                    <a href="" class=""><span>0.1 кг</span></a>
+                    <a href="" class=""><span>0.25 кг</span></a>
+                    <a href="" class="state-active"><span>1 кг</span></a>
+                </div>
+        
+                <div class="bottom-block">
+                    <div class="product-counter-prices">
+                        <div class="counter">
+                            <button class="minus" tabindex="0">-</button>
+                            <input type="text" id="" value="1" name="" data-step="1" inputmode="numeric" tabindex="0">
+                            <button class="plus" tabindex="0">+</button>
+                        </div>
+                        <div class="product-prices">
+                            <p class="product-price">182 <span>грн</span></p>
+                            <div class="product-price-old">
+                                <div class="product-price-old-container">
+                                    <p>210 <span>грн</span>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="add-to-cart"><img src="./images/icons/basket_white_buy.svg" alt="cart">
+                    </button>
+                </div>
+                <button class="make-order">Замовити</button>
+        
+            </div>
+
+    </div>
+
+</div>
+            </div>
+            <div class="cart_items_title cart_item">
+                <div class="cart_itm_p2">
+
+                <div class="stocks">
+
+                </div>
+                <div class="cart_itm_img"></div>
+                <div class="cart_itm_p1">
+                <div class="cart_itm_title"><span>Назва товару</span></div>
+                <div class="cart_itm_kinds">
+                    <div class="weights">
+                        <span>Вага</span>
+                    </div>
+                    <div class="colors">
+                        <span>Колір</span>
+                    </div>
+                </div>
+                </div>
+                </div>
+                <div class="cart_itm_price_block">
+                    <div class="counter-title">
+                        <span>Кількість</span>
+                    </div>
+                    <div class="price">
+                        <span>Ціна</span>
+                    </div>
+                    <div class="delete-t">
+                        <span>Очистити</span>
+                    </div>
+                </div>
+            </div>
+            <div class="cart_items">
+                <div class="cart_item pr__weight discount pr_new">
+                    <div class="cart_itm_p2">
+                        <div class="stocks">
+                            <span class="new-stock_text">new</span>
+                            <span class="new-discount_text">Знижка</span>
+                        </div>
+                    <div class="cart_itm_img"><a href=""><img src="./images/temp/product-img.jpg" alt=""></a></div>
+                    <div class="cart_itm_p1">
+                    <div class="cart_itm_title"><p><a href="">ARZUM OKKA MINIO OK004-D(ОРХІДЕЯ)</a></p></div>
+                    <div class="cart_itm_kinds ">
+                        <div class="weights">
+                            <p class="c-title">Вага</p>
+                            <span class="empty">—</span>
+                            <p class="weight-name">1 кг</p>
+
+                        </div>
+                        <div class="colors">
+                            <p class="c-title">Колір</p>
+                            <span class="empty">—</span>
+
+                            <p class="color-name">Червоний</p>
+                        </div>
+                    </div>
+                    </div>
+                    </div>
+                    <div class="cart_itm_price_block">
+                        <div class="counter">
+                            <button class="minus" tabindex="0">–</button>
+                            <input type="text" id="" value="1" name="" data-step="1" inputmode="numeric" tabindex="0">
+                            <button class="plus" tabindex="0">+</button>
+                        </div>
+                        <div class="price">
+                            <p>1600 грн</p>
+                        </div>
+                        <a href="" class="delete">
+                            <span>Видалити</span>
+                        </a>
+                    </div>
+                </div>
+                <div class="cart_item pr__weight  pr_new">
+                    <div class="cart_itm_p2">
+                        <div class="stocks">
+                            <span class="new-stock_text">new</span>
+                            <span class="new-discount_text">Знижка</span>
+                        </div>
+                    <div class="cart_itm_img"><a href=""><img src="./images/temp/product-img.jpg" alt=""></a></div>
+                    <div class="cart_itm_p1">
+                    <div class="cart_itm_title"><p><a href="">ARZUM OKKA MINIO OK004-D(ОРХІДЕЯ)</a></p></div>
+                    <div class="cart_itm_kinds ">
+                        <div class="weights">
+                            <p class="c-title">Вага</p>
+                            <span class="empty">—</span>
+                            <p class="weight-name">1 кг</p>                        </div>
+                        <div class="colors">
+                            <p class="c-title">Колір</p>
+                            <span class="empty">—</span>
+
+                            <p class="color-name">Червоний</p>
+                        </div>
+                    </div>
+                    </div>
+                    </div>
+                    <div class="cart_itm_price_block">
+                        <div class="counter">
+                            <button class="minus" tabindex="0">–</button>
+                            <input type="text" id="" value="1" name="" data-step="1" inputmode="numeric" tabindex="0">
+                            <button class="plus" tabindex="0">+</button>
+                        </div>
+                        <div class="price">
+                            <p>1600 грн</p>
+                        </div>
+                        <a href="" class="delete">
+                            <span>Видалити</span>
+                        </a>
+                    </div>
+                </div>
+                <div class="cart_item pr__colors discount ">
+                    <div class="cart_itm_p2">
+                        <div class="stocks">
+                            <span class="new-stock_text">new</span>
+                            <span class="new-discount_text">Знижка</span>
+                        </div>
+                    <div class="cart_itm_img"><a href=""><img src="./images/temp/product-img.jpg" alt=""></a></div>
+                    <div class="cart_itm_p1">
+                    <div class="cart_itm_title"><p><a href="">ARZUM OKKA MINIO OK004-D(ОРХІДЕЯ)</a></p></div>
+                    <div class="cart_itm_kinds ">
+                        <div class="weights">
+                            <p class="c-title">Вага</p>
+                            <span class="empty">—</span>
+                            <p class="weight-name">1 кг</p>                        </div>
+                        <div class="colors">
+                            <p class="c-title">Колір</p>
+                            <span class="empty">—</span>
+
+                            <p class="color-name">Червоний</p>
+                        </div>
+                    </div>
+                    </div>
+                    </div>
+                    <div class="cart_itm_price_block">
+                        <div class="counter">
+                            <button class="minus" tabindex="0">–</button>
+                            <input type="text" id="" value="1" name="" data-step="1" inputmode="numeric" tabindex="0">
+                            <button class="plus" tabindex="0">+</button>
+                        </div>
+                        <div class="price">
+                            <p>1600 грн</p>
+                        </div>
+                        <a href="" class="delete">
+                            <span>Видалити</span>
+                        </a>
+                    </div>
+                </div>
+                <div class="cart_item pr__colors discount pr_new">
+                    <div class="cart_itm_p2">
+                        <div class="stocks">
+                            <span class="new-stock_text">new</span>
+                            <span class="new-discount_text">Знижка</span>
+                        </div>
+                    <div class="cart_itm_img"><a href=""><img src="./images/temp/product-img.jpg" alt=""></a></div>
+                    <div class="cart_itm_p1">
+                    <div class="cart_itm_title"><p><a href="">ARZUM OKKA MINIO OK004-D(ОРХІДЕЯ)</a></p></div>
+                    <div class="cart_itm_kinds ">
+                        <div class="weights">
+                            <p class="c-title">Вага</p>
+                            <span class="empty">—</span>
+                            <p class="weight-name">1 кг</p>                        </div>
+                        <div class="colors">
+                            <p class="c-title">Колір</p>
+                            <span class="empty">—</span>
+
+                            <p class="color-name">Червоний</p>
+                        </div>
+                    </div>
+                    </div>
+                    </div>
+                    <div class="cart_itm_price_block">
+                        <div class="counter">
+                            <button class="minus" tabindex="0">–</button>
+                            <input type="text" id="" value="1" name="" data-step="1" inputmode="numeric" tabindex="0">
+                            <button class="plus" tabindex="0">+</button>
+                        </div>
+                        <div class="price">
+                            <p>1600 грн</p>
+                        </div>
+                        <a href="" class="delete">
+                            <span>Видалити</span>
+                        </a>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+        <div class="shop_stock">
+            <div class="shop_stock_in">
+                <div class="shop_stock_item">
+                    <img src="./images/icons/money_500.svg" alt="">
+                    <p>Замовлення від 500 грн</p>
+                    <span>безкоштовна Доставка</span>
+                </div>
+                <div class="shop_stock_item">
+                    <img src="./images/icons/money_1000.svg" alt="">
+                    <p>Замовлення від 1000 грн</p>
+                    <span>знижка консультанта (10% на техніку, 20% все інше)
+                        безкоштовна Доставка на відділення Нової Пошти</span>
+                </div>
+                <div class="shop_stock_item">
+                    <img src="./images/icons/money_1200.svg" alt="">
+                    <p>Замовлення від 1200 грн</p>
+                    <span>знижка консультанта (10% на техніку, 20% все інше)
+                        безкоштовна Доставка на адресу</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="cart_bottom main_cart_bottom">
+        <div class="container-block">
+
+        <div class="cart_bottom_left">
+            <div class="cart_total">
+                <p>Загальна сума:</p>
+                <div class="total_count">
+                    <p>4456 <span>грн</span></p>
+                </div>
+            </div>
+        </div>
+        <button class="custom-button draw_up_order">Оформити замовлення</button>
+        </div>
+    </div>
+
+    <div class="default_popup order_popup">
+        <div class="popup_close">
+            <div class="icon-close"><span></span></div>
+        </div>
+        <div class="popup_content">
+            <p class="popup_title">Ваше замовлення від <span>22.04.2020</span></p>
+            <div class="order_table">
+                <div class="order_row pr__weight">
+                    <div class="order_col order_name"><p>Кава optimum</p></div>
+                    <div class="order_col order_w">
+                        <p>1 <span>кг</span></p>
+                        <span class="empty">—</span>
+                    </div>
+                    <div class="order_col order_c">
+                        <p>Червоний</p>
+                        <span class="empty">—</span>
+                    </div>
+                    <div class="order_col order_count"><p>1</p></div>
+                    <div class="order_col order_price"><p>325 <span>грн</span></p></div>
+                </div>
+                <div class="order_row pr__weight">
+                    <div class="order_col order_name"><p>Кава optimum</p></div>
+                    <div class="order_col order_w">
+                        <p>1 <span>кг</span></p>
+                        <span class="empty">—</span>
+                    </div>
+                    <div class="order_col order_c">
+                        <p>Червоний</p>
+                        <span class="empty">—</span>
+                    </div>
+                    <div class="order_col order_count"><p>1</p></div>
+                    <div class="order_col order_price"><p>325 <span>грн</span></p></div>
+                </div>
+                <div class="order_row pr__weight">
+                    <div class="order_col order_name"><p>Кава optimum</p></div>
+                    <div class="order_col order_w">
+                        <p>1 <span>кг</span></p>
+                        <span class="empty">—</span>
+                    </div>
+                    <div class="order_col order_c">
+                        <p>Червоний</p>
+                        <span class="empty">—</span>
+                    </div>
+                    <div class="order_col order_count"><p>1</p></div>
+                    <div class="order_col order_price"><p>325 <span>грн</span></p></div>
+                </div>
+            </div>
+            <div class="cart_bottom">
+                <div class="cart_bottom_left">
+                    <div class="cart_total">
+                        <p>Загальна сума:</p>
+                        <div class="total_count">
+                            <p>4456 <span>грн</span></p>
+                        </div>
+                    </div>
+                </div>
+                <button class="custom-button draw_up_order">+ Додати замовлення</button>
+
+            </div>
+
+        </div>
+    </div>
+</section>
+<section class="footer">
+    <div class="container-block">
+        <div class="footer-container">
+            <div class="footer-logo">
+                <img src="./images/footer/logo_footer.svg" alt="Turcoffee logo">
+            </div>
+            <div class="footer-center">
+                <div class="footer-center-col">
+                    <p class="footer-center-col-title">КОНТАКТИ</p>
+                    <ul>
+                        <li><img src="./images/icons/home.svg" alt=""><span>58000, Україна, <br>
+м. Чернівці, вул. Головна,</span></li>
+                        <li><a href="tel:+3803722555555"><img src="./images/icons/phone.svg" alt=""><span>+38 03722 55 55 55</span></a>
+                        </li>
+                        <li><a href="mailto:turcoffee@gmail.com"><img src="./images/icons/e-mail.svg" alt=""><span>turcoffee@gmail.com</span></a>
+                        </li>
+
+                    </ul>
+                </div>
+                <div class="footer-center-col">
+                    <p class="footer-center-col-title">Інформація</p>
+                    <ul class="custom-ul">
+                        <li><a href="">Про нас</a></li>
+                        <li><a href="">Каталог</a></li>
+                        <li><a href="">Акції / Знижки</a></li>
+                        <li><a href="">Новинки</a></li>
+                        <li><a href="">Блог</a></li>
+                        <li><a href="">Контакти</a></li>
+                    </ul>
+                </div>
+                <div class="footer-center-col">
+                    <p class="footer-center-col-title">КЛІЄНТАМ</p>
+                    <ul class="custom-ul">
+                        <li><a href="">Бізнес с Turcoffee</a></li>
+                        <li><a href="">Як оформити замовлення</a></li>
+                        <li><a href="">Оплата і доставка</a></li>
+                        <li><a href="">Питання та відповіді</a></li>
+                        <li><a href="">Політика конфідеціальності</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-socials">
+                <div class="">
+                    <p class="footer-socials-title">ОТРИМУЙТЕ ОСТАННІ
+                        ОНОВЛЕННЯ ТА ПРОПОЗИЦІЇ</p>
+                    <input type="email" placeholder="e-mail" class="subscribe-input">
+                    <button class="custom-button">Підпишись</button>
+                </div>
+
+                <div class="socials-icons">
+                    <a href=""><img src="./images/icons/facebook.svg" alt="facebook"></a>
+                    <a href=""><img src="./images/icons/twitter.svg" alt="twitter"></a>
+                    <a href=""><img src="./images/icons/insta_.png" alt="instagram"></a>
+                    <a href=""><img src="./images/icons/youtube.svg" alt="youtube"></a>
+                    <a href=""><img src="./images/icons/telegram.svg" alt="telegram"></a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="line-red">
+        <div class="container-block"><p>© 2020 Інтернет-магазин Turcoffee</p>
+        </div>
+    </div>
+</section>
+</div>
+<section class="text-templates">
+    <span class="productFavHint" style="display: none">В обране</span>
+    <span class="add-to-cartHint" style="display: none">Додати в кошик</span>
+</section>
+<script type='text/javascript' src='https://cdnjs.cloudflare.com/ajax/libs/jquery/1.7.2/jquery.min.js'></script>
+<script type='text/javascript' src='https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js'></script>
+
+<script src="https://unpkg.com/@popperjs/core@2/dist/umd/popper.min.js"></script>
+<script src="https://unpkg.com/tippy.js@6/dist/tippy-bundle.umd.js"></script>
+
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui-touch-punch/0.2.3/jquery.ui.touch-punch.min.js"></script>
+<script type='text/javascript' src='./js/slick-lightbox.js'></script>
+
+
+<script type='text/javascript' src='./js/main.js'></script>
+</body>
+</html>
