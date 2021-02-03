@@ -1,4 +1,7 @@
 ## nrs
+
+1) Слайдер,додати lazyload
+2)Додати прелоад шрифтів
 ```
 <link rel="preload" as="font" crossorigin="anonymous" href="/css/fonts/GothamProRegular/GothamProRegular.woff">
 <link rel="preload" as="font" crossorigin="anonymous" href="/css/fonts/GothamProBlack/GothamProBlack.woff">
@@ -10,6 +13,10 @@
 <link rel="preload" as="font" crossorigin="anonymous" href="/css/fonts/Leelawadee.woff">
 <link rel="preload" as="font" crossorigin="anonymous" href="/css/fonts/Oswald-Bold.woff">
 ```
+
+3).ac-installation-baner (банер під слайдером на головній). виводяться 3 картинки по 500кб. дві з них для hd i uhd (краще за бекенді зробити умову коли і яка картинка виводиться)
+
+---
 
 ## titon
 ```
