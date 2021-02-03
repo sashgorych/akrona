@@ -1,6 +1,7 @@
 ## nrs
 
 1) Слайдер,додати lazyload
+
 2)Додати прелоад шрифтів
 ```
 <link rel="preload" as="font" crossorigin="anonymous" href="/css/fonts/GothamProRegular/GothamProRegular.woff">
