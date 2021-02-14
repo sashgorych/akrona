@@ -1,0 +1,26 @@
+<div class="audio-player">
+    <div class="audio_list">
+        <audio>
+            <source src=""  type="audio/mp3">
+        </audio>
+    </div>
+    <div class="controls">
+        <div class="top">
+            <div class="left_co_t">
+        <div class="play-container">
+            <div class="toggle-play play">
+            </div>
+        </div>
+            <div class="name">Music Song</div>
+            </div>
+            <div class="time">
+            <div class="current">0:00</div>
+            <div class="divider">/</div>
+            <div class="length"></div>
+        </div>
+       </div>
+        <div class="timeline">
+            <div class="progress"></div>
+        </div>
+    </div>
+</div>
