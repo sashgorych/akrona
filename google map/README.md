@@ -37,6 +37,7 @@ html
 ```
 
 Дані які мають приходити з адмінки
+```
  [
         {
             zip: '89135',
@@ -50,3 +51,4 @@ html
             descrContent: "<p>We are serve this zip</p>"
         }
     ]
+```
