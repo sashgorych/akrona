@@ -1,3 +1,6 @@
+zipDataJson файлик містить інфу з координатами регіонів для кожного зіпкоду (в даному випадку містить лише для штату невада)
+Можна його підключити як просто окремий js файл, або передавати з беку ajax-om. 
+ 
 ```
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBxfTnzz6HM2jdqIIiM3wkSzfU8mz1k_zU"></script>
 <script type='text/javascript' src='/js/google-map-marker.js'></script>
