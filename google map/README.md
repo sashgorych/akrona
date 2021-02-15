@@ -12,6 +12,10 @@ html
 <div class="google_map_zip">
     <section class="areas_serve re-cnt st-text">
         <div class='left-map'>
+            <div class="success_search_zip">
+                <p><span class="zip"></span> may be outside our service area</p>
+                <span>Please try another location</span>
+            </div>
             <div class="info_block">
 
             </div>
@@ -19,13 +23,20 @@ html
         </div>
         <div class="right-map">
             <div class="searchBlock">
-                <input type="text" value="89109" id="searchByZip">
-                <button class="searchByZipBtn">search</button>
+                <div class="do_serve">
+                    <p>Do we serve your area?</p>
+                </div>
+                <div class="do_serve_bottom">
+                    <input type="text" value="" placeholder="Enter your zip code" id="searchByZip">
+                    <button class="searchByZipBtn">search</button>
+                </div>
+
 
             </div>
         </div>
     </section>
 </div>
+
 ```
 
 Дані які мають приходити з адмінки
