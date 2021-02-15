@@ -6,17 +6,21 @@
 html
 ```
 <div class="google_map_zip">
-<section class="areas_serve re-cnt st-text">
-    <div class="info_block">
+    <section class="areas_serve re-cnt st-text">
+        <div class='left-map'>
+            <div class="info_block">
 
-    </div>
-    <div id='map_canvas'></div>
-</section>
-<div class="searchBlock">
-    <input type="text" value="89109" id="searchByZip">
-    <button class="searchByZipBtn">search</button>
+            </div>
+            <div id='map_canvas'></div>
+        </div>
+        <div class="right-map">
+            <div class="searchBlock">
+                <input type="text" value="89109" id="searchByZip">
+                <button class="searchByZipBtn">search</button>
 
-</div>
+            </div>
+        </div>
+    </section>
 </div>
 ```
 
