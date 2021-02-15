@@ -6,34 +6,22 @@
 html
 ```
 <div class="google_map_zip">
-<section class="areas_serve re-cnt st-text">
-    <div class="info_block">
+    <section class="areas_serve re-cnt st-text">
+        <div class='left-map'>
+            <div class="info_block">
 
-    </div>
-    <div id='map_canvas'></div>
-</section>
-<div class="searchBlock">
-    <input type="text" value="89109" id="searchByZip">
-    <button class="searchByZipBtn">search</button>
+            </div>
+            <div id='map_canvas'></div>
+        </div>
+        <div class="right-map">
+            <div class="searchBlock">
+                <input type="text" value="89109" id="searchByZip">
+                <button class="searchByZipBtn">search</button>
 
+            </div>
+        </div>
+    </section>
 </div>
-</div>
-
-<style>
-        .areas_serve .info_block {
-            width: 40%;
-        }
-
-        #map_canvas {
-            width: 60%;
-        }
-
-        .areas_serve {
-            min-height: 400px;
-            width: 100%;
-            display: flex;
-        }
-    </style>
 ```
 
 Дані які мають приходити з адмінки
