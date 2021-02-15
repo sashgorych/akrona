@@ -18,22 +18,6 @@ html
 
 </div>
 </div>
-
-<style>
-        .areas_serve .info_block {
-            width: 40%;
-        }
-
-        #map_canvas {
-            width: 60%;
-        }
-
-        .areas_serve {
-            min-height: 400px;
-            width: 100%;
-            display: flex;
-        }
-    </style>
 ```
 
 Дані які мають приходити з адмінки
