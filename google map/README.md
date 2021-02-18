@@ -3,6 +3,7 @@ zipDataJson файлик містить інфу з координатами р�
  
 ```
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBxfTnzz6HM2jdqIIiM3wkSzfU8mz1k_zU"></script>
+<script type='text/javascript' src='/js/zipData.js'></script>
 <script type='text/javascript' src='/js/google-map-marker.js'></script>
 
 ```
