@@ -1,6 +1,7 @@
 # сторінка продукту
 1) значок акція. вставити цей блок в .item-img-block біля картинки. щоб вийшло ось так
-```<div class="item-img-block">
+```
+<div class="item-img-block">
         <div class="stock_product"></div>
         <img src=" alt="">
     </div>
@@ -12,7 +13,8 @@
 </div>
 ```
 2)Стара нова ціна: зараз є 
-```<p class="catalog-item-title">
+```
+<p class="catalog-item-title">
         <span id="item-price-for-one"></span>
         грн./кв.м
   </p> 
