@@ -110,7 +110,8 @@ var InstaParser = function () {
             this.INSTAGRAM_HOSTNAME = "https://www.instagram.com/", this.SHARED_DATA_TAG_EXP = /^[\w\W]*<script type="text\/javascript">window._sharedData = ({[\w\W]*});<\/script>[\w\W]*$/g
         }
         return instagramRegExp.prototype.buildUrl = function (t) {
-            return "" + this.INSTAGRAM_HOSTNAME + t
+            console.log("" + this.INSTAGRAM_HOSTNAME + t +"/?__a=1")
+            return "" + this.INSTAGRAM_HOSTNAME + t +"/?__a=1"
         },
             instagramRegExp.prototype.parseJSON = function (t, n) {
             try {
@@ -163,7 +164,8 @@ var InstaParser = function () {
                             }, e ? (u = this.buildUrl(e), [4, this.HTTP(u)]) : (r.logError(["username"]), [2, n]);
                         case 1:
                             return s = o.sent(), c = (null === (a = null === (l = null === (i = null == s ? void 0 : s.entry_data) || void 0 === i ? void 0 : i.ProfilePage[0]) || void 0 === l ? void 0 : l.graphql) || void 0 === a ? void 0 : a.user) || null, [2, t(t({}, n), {
-                                posts: c['edge_owner_to_timeline_media']['edges'].splice(0, params.postsCount).map(el=>{
+                                posts:
+                                    s.graphql.user['edge_owner_to_timeline_media']['edges'].splice(0, params.postsCount).map(el=>{
                                     return {
                                         url: `https://www.instagram.com/p/${el.node.shortcode}/`,
                                         thumbnailUrl: el.node.thumbnail_src,
