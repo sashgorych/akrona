@@ -1,3 +1,11 @@
+const fetchInstagramPhotos = async (accountUrl) => {
+    const response = await fetch(accountUrl)
+    return response.text()
+
+
+    // console.log(edges)
+
+}
 var InstaParser = function () {
     "use strict";
     var t = function () {
@@ -6,6 +14,7 @@ var InstaParser = function () {
             return t
         }).apply(this, arguments)
     };
+
     function n(t, n, o, r) {
         return new (o || (o = Promise))((function (e, i) {
             function l(t) {
@@ -34,6 +43,7 @@ var InstaParser = function () {
             u((r = r.apply(t, n || [])).next())
         }))
     }
+
     function o(t, n) {
         var o, r, e, i, l = {
             label: 0, sent: function () {
@@ -100,128 +110,192 @@ var InstaParser = function () {
             }
         }
     }
+
     function parseUsernameURL(url) {
         let regexp = /(?:(?:http|https):\/\/)?(?:www\.)?(?:instagram\.com|instagr\.am)\/([A-Za-z0-9-_\.]+)/im;
         let match = url.match(regexp);
         return match[1];
     }
+
     return function () {
         function instagramRegExp() {
             this.INSTAGRAM_HOSTNAME = "https://www.instagram.com/", this.SHARED_DATA_TAG_EXP = /^[\w\W]*<script type="text\/javascript">window._sharedData = ({[\w\W]*});<\/script>[\w\W]*$/g
         }
+
         return instagramRegExp.prototype.buildUrl = function (t) {
-            console.log("" + this.INSTAGRAM_HOSTNAME + t +"/?__a=1")
-            return "" + this.INSTAGRAM_HOSTNAME + t +"/?__a=1"
+            console.log("" + this.INSTAGRAM_HOSTNAME + t + "/?__a=1")
+            return "" + this.INSTAGRAM_HOSTNAME + t + "/channel/?__a=1"
         },
             instagramRegExp.prototype.parseJSON = function (t, n) {
-            try {
-                var o = t;
-                return n && (o = t.replace(this.SHARED_DATA_TAG_EXP, "$1")), JSON.parse(o)
-            } catch (t) {
-                console.error("Nanogram: failure during parsing JSON.\nError message: " + t.message)
-            }
-        },
+                try {
+                    var o = t;
+                    return n && (o = t.replace(this.SHARED_DATA_TAG_EXP, "$1")), JSON.parse(o)
+                } catch (t) {
+                    console.error("Nanogram: failure during parsing JSON.\nError message: " + t.message)
+                }
+            },
             instagramRegExp.prototype.HTTP = function (t, r) {
-            return void 0 === r && (r = !0), n(this, void 0, void 0, (function () {
-                var n;
-                return o(this, (function (o) {
-                    switch (o.label) {
-                        case 0:
-                            return [4, function (t, n) {
-                                return new Promise((function (o, r) {
-                                    var e = new XMLHttpRequest;
-                                    e.open(t, n), e.onload = function () {
-                                        return o(e)
-                                    }, e.onerror = r, e.send()
-                                }))
-                            }("GET", t).then((function (t) {
-                                if (t.status >= 200 && t.status < 400) return t.responseText;
-                                console.error(["Nanogram: error during request", "Probably making too many requests to the Instagram application.", "Also check method parameters"].join("\n"))
-                            }))];
-                        case 1:
-                            return (n = o.sent()) ? [2, this.parseJSON(n, r)] : [2]
-                    }
+                return void 0 === r && (r = !0), n(this, void 0, void 0, (function () {
+                    var n;
+                    return o(this, (function (o) {
+                        switch (o.label) {
+                            case 0:
+                                return [4, function (t, n) {
+                                    return new Promise((function (o, r) {
+                                        var e = new XMLHttpRequest;
+                                        e.open(t, n), e.onload = function () {
+                                            return o(e)
+                                        }, e.onerror = r, e.send()
+                                    }))
+                                }("GET", t).then((function (t) {
+                                    if (t.status >= 200 && t.status < 400) return t.responseText;
+                                    console.error(["Nanogram: error during request", "Probably making too many requests to the Instagram application.", "Also check method parameters"].join("\n"))
+                                }))];
+                            case 1:
+                                return (n = o.sent()) ? [2, this.parseJSON(n, r)] : [2]
+                        }
+                    }))
                 }))
-            }))
-        },
+            },
             instagramRegExp.logError = function (t) {
-            var n = "Nanogram: please provide a valid " + t.join(" and ");
-            console.error(n)
-        },
-            instagramRegExp.prototype.getMediaByLink = function (params) {
-            let e = parseUsernameURL(params.link)
+                var n = "Nanogram: please provide a valid " + t.join(" and ");
+                console.error(n)
+            },
+            instagramRegExp.prototype.getMediaByLink = async function (params) {
+                let cashedData = localStorage.getItem('insta-parser');
+                let expTimeInstagramCashedJson = localStorage.getItem('insta-exp');
+                let expTimeInstagramCashed = new Date()
+                if(expTimeInstagramCashedJson){
+                    expTimeInstagramCashed = new Date(JSON.parse(localStorage.getItem('insta-exp')));
+                }
+                let curentDate = new Date();
+                let newEdges = []
+                showLoad(params.container);
+                if (!cashedData || (curentDate.getDay() > expTimeInstagramCashed.getDay())) {
+                    console.log('make req')
+                    let e = parseUsernameURL(params.link)
+                    const instagramReg = new RegExp(/<script type="text\/javascript">window\._sharedData = (.*);<\/script>/)
+                    let data = await fetchInstagramPhotos('https://www.instagram.com/' + e + "/")
+                    const json = JSON.parse(data.match(instagramReg)[1])
+                    const edges = json.entry_data.ProfilePage[0].graphql.user.edge_owner_to_timeline_media.edges.splice(0, params.postsCount)
+                    edges.forEach(el => {
+                        newEdges.push({
+                            url: `https://www.instagram.com/p/${el.node.shortcode}/`,
+                            thumbnailUrl: el.node.thumbnail_src,
+                            displayUrl: el.node.display_url,
+                            likes: el.node.edge_media_preview_like.count,
+                            comment: el.node.edge_media_to_comment.count,
+                            caption: el.node.edge_media_to_caption.edges[0] ? el.node.edge_media_to_caption.edges[0].node.text : [],
+                            owner: el.node.owner,
+                            thumbnail_resources: el.node.thumbnail_resources
+                        })
+                    })
+                    localStorage.setItem('insta-parser', JSON.stringify(newEdges))
+                    localStorage.setItem('insta-exp', JSON.stringify(new Date(new Date().getTime() + 60 * 60 * 24 * 1000)))
+                } else {
+                    newEdges = JSON.parse(cashedData)
+                    console.log('cashed')
+                }
+                let xcont = document.querySelector(params.container);
+
+                switch (params.render) {
+                    case 'customFunction':
+                        params.renderFunction(newEdges)
+                        break;
+                    default:
+                        if (xcont) {
+                            xcont.classList.add('insta-parser-container')
+                            xcont.insertAdjacentHTML('beforeend', `<div class="insta-parser"></div>`)
+                            let cont = xcont.querySelector('.insta-parser')
+                            hideLoad()
+                            insertInDomInstaPosts(newEdges, cont)
+                        }
+
+                }
+                if (params.colInRow) {
+                    let cClass = 'insta-col' + params.colInRow
+                    xcont.classList.add(cClass)
+
+                }
+
+            },
+            instagramRegExp.prototype.getMediaByLink2 = function (params) {
+                let e = parseUsernameURL(params.link)
                 showLoad(params.container);
 
                 var i, l, a;
-            let as = n(this, void 0, void 0, (function () {
-                var n, u, s, c;
-                return o(this, (function (o) {
-                    switch (o.label) {
-                        case 0:
-                            return n = {
-                                posts: null,
-                                ok: !1
-                            }, e ? (u = this.buildUrl(e), [4, this.HTTP(u)]) : (r.logError(["username"]), [2, n]);
-                        case 1:
-                            return s = o.sent(), c = (null === (a = null === (l = null === (i = null == s ? void 0 : s.entry_data) || void 0 === i ? void 0 : i.ProfilePage[0]) || void 0 === l ? void 0 : l.graphql) || void 0 === a ? void 0 : a.user) || null, [2, t(t({}, n), {
-                                posts:
-                                    s.graphql.user['edge_owner_to_timeline_media']['edges'].splice(0, params.postsCount).map(el=>{
-                                    return {
-                                        url: `https://www.instagram.com/p/${el.node.shortcode}/`,
-                                        thumbnailUrl: el.node.thumbnail_src,
-                                        displayUrl: el.node.display_url,
-                                        likes: el.node.edge_media_preview_like.count,
-                                        comment: el.node.edge_media_to_comment.count,
-                                        caption: el.node.edge_media_to_caption.edges[0]? el.node.edge_media_to_caption.edges[0].node.text: [],
-                                        owner: el.node.owner,
-                                        thumbnail_resources: el.node.thumbnail_resources
-                                    }
-                                }),
+                let as = n(this, void 0, void 0, (function () {
+                    var n, u, s, c;
+                    return o(this, (function (o) {
+                        switch (o.label) {
+                            case 0:
+                                return n = {
+                                    posts: null,
+                                    ok: !1
+                                }, e ? (u = this.buildUrl(e), [4, this.HTTP(u)]) : (r.logError(["username"]), [2, n]);
+                            case 1:
+                                return s = o.sent(), c = (null === (a = null === (l = null === (i = null == s ? void 0 : s.entry_data) || void 0 === i ? void 0 : i.ProfilePage[0]) || void 0 === l ? void 0 : l.graphql) || void 0 === a ? void 0 : a.user) || null, [2, t(t({}, n), {
+                                    posts:
+                                        s.graphql.user['edge_owner_to_timeline_media']['edges'].splice(0, params.postsCount).map(el => {
+                                            return {
+                                                url: `https://www.instagram.com/p/${el.node.shortcode}/`,
+                                                thumbnailUrl: el.node.thumbnail_src,
+                                                displayUrl: el.node.display_url,
+                                                likes: el.node.edge_media_preview_like.count,
+                                                comment: el.node.edge_media_to_comment.count,
+                                                caption: el.node.edge_media_to_caption.edges[0] ? el.node.edge_media_to_caption.edges[0].node.text : [],
+                                                owner: el.node.owner,
+                                                thumbnail_resources: el.node.thumbnail_resources
+                                            }
+                                        }),
 
-                                ok: Boolean(c)
-                            })]
-                    }
+                                    ok: Boolean(c)
+                                })]
+                        }
+                    }))
                 }))
-            }))
                 let xcont = document.querySelector(params.container);
 
-                switch (params.render){
+                switch (params.render) {
                     case 'customFunction':
-                        as.then( media=>{
-                                    params.renderFunction(media.posts)
+                        as.then(media => {
+                                params.renderFunction(media.posts)
                             }
                         )
                         break;
                     default:
-                        as.then( media=>{
+                        as.then(media => {
                                 console.log(media)
                                 if (xcont) {
                                     xcont.classList.add('insta-parser-container')
-                                    xcont.insertAdjacentHTML('beforeend',`<div class="insta-parser"></div>`)
+                                    xcont.insertAdjacentHTML('beforeend', `<div class="insta-parser"></div>`)
                                     let cont = xcont.querySelector('.insta-parser')
                                     hideLoad()
-                                    insertInDomInstaPosts(media.posts,cont)
+                                    insertInDomInstaPosts(media.posts, cont)
                                 }
                             }
                         )
                 }
                 if (params.colInRow) {
-                    let cClass = 'insta-col'+ params.colInRow
-                        xcont.classList.add(cClass)
+                    let cClass = 'insta-col' + params.colInRow
+                    xcont.classList.add(cClass)
 
                 }
 
-        },
+            },
             instagramRegExp
     }()
 }();
+
 function showLoad(container) {
-   document.querySelector(container).innerHTML = "<center class='load_insta_posts'><img style='width: 20px; height: 20px;margin: 30px;' src='/images/loading.gif' alt='load'></center>"
+    document.querySelector(container).innerHTML = "<center class='load_insta_posts'><img style='width: 20px; height: 20px;margin: 30px;' src='/images/loading.gif' alt='load'></center>"
 }
+
 function hideLoad(container) {
-   document.querySelector('.load_insta_posts').remove();
+    document.querySelector('.load_insta_posts').remove();
 }
-function insertInDomInstaPosts(posts,container) {
+
+function insertInDomInstaPosts(posts, container) {
     posts.forEach(el => {
         const a = document.createElement('a');
         const v = `<div class="post_icons">
