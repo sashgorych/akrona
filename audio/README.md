@@ -1,6 +1,6 @@
 для відео код:
 ```
- <div class="video">
+ <div class="video-youtube">
                     <a class="video__link" href="https://www.youtube.com/watch?v=2sdIzYBoTO4&ab_channel=Arzum">
                         <picture>
                             <source srcset="" type="image/webp">
