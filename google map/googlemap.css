@@ -1,0 +1,171 @@
+.areas_serve .info_block {
+    width: 40%;
+}
+.areas_serve{}
+.google_map_zip{
+    overflow: hidden;
+}
+#map_canvas {
+    width: 100%;
+    min-height: 400px;
+}
+.close_google_popup{
+    cursor: pointer;
+    display: inline-block;
+    background-image: url(//www.gstatic.com/gmeviewer/images/MyMaps_Icons003.png);
+    background-position: -1px -191px;
+    height: 22px;
+    width: 22px;
+}
+.info_block_img img{
+    display: block;
+}
+.tooltip-google-map{
+    display: flex;
+    margin:0 0 10px 0;
+    justify-content: space-between;
+    align-items: center;
+    background: #e63232;
+    padding: 10px 20px;
+ }
+.areas_serve {
+    margin-bottom: 100px;
+    min-height: 400px;
+    width: 100%;
+    display: flex;
+flex-direction: column-reverse;
+}
+.info_block_title{
+    font-size: 21px;
+    font-weight: normal;
+    margin: 0;
+    color: white;
+}
+.left-map .info_block {
+    border-top: 1px solid #1c6bb5;
+    border-left: 1px solid #ef4844;
+    border-bottom: 1px solid #1c6bb5;
+    transition: .3s;
+
+    box-sizing: border-box;
+    position: absolute;
+    left: -100%;
+    top: 0;
+    height: 100%;
+    z-index: 2;
+    width: 200px;
+    background: white;
+}
+
+.left-map .info_block.active {
+    left: 0;
+    transition: .3s;
+
+}
+
+.left-map {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.right-map {
+    height: 100%;
+    width: 100%;
+    margin-bottom: 60px;
+}
+
+.do_serve {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    height: 52px;
+    font-size: 15pt;
+    padding-top: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+    font-family: leelawdb;
+    background-color: #1c6bb5;
+    border-radius: 20px 20px 0 0;
+}
+
+.searchBlock {
+    max-width: 500px;
+    text-align: center;
+}
+
+.do_serve_bottom input {
+    width: 80%;
+    border: none;
+    color: #a7a9ac;
+    background: #fff;
+    font-size: 24px;
+    padding-left: 10px;
+    font-family: leelawad;
+    height: 36px;
+
+    outline: none;
+}
+
+.do_serve_bottom {
+    display: flex;
+    height: 127px;
+    justify-content: center;
+    align-items: center;
+    background-color: #ef4844;
+    border-radius: 0 0 20px 20px;
+}
+
+.searchByZipBtn {
+    width: 40px;
+    height: 36px;
+    border: none;
+    cursor: pointer;
+    background: #fff url(../images/svg/free_estimate_znak.svg) no-repeat center center;
+    border-left: 0 none #aeb0b2;
+    color: transparent;
+}
+
+.success_search_zip p {
+    margin: 0 0 20px 0;
+}
+
+.success_search_zip {
+    font-size: 25px;
+    display: none;
+    height: 200px;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    color: white;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    right: 0;
+    position: absolute;
+}
+.info_block_link a{
+    color: black;
+}
+.info_block_link{
+    margin-top: 20px;
+    padding: 0 15px;
+    box-sizing: border-box;
+}
+.success_search_zip.success {
+    background: linear-gradient(to bottom, #abeaab 0, #bfffbf 100%);
+    border-top: 10px solid green;
+    display: flex;
+}
+
+.success_search_zip.error {
+    background: linear-gradient(to bottom, #ffa0a0 0, #f9c2c2 100%);
+    border-top: 10px solid #d60000;
+    display: flex;
+}
+@media screen and (max-width: 736px){
+    .searchBlock{
+        max-width: 100%;
+    }
+}
