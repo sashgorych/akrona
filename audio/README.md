@@ -1,5 +1,6 @@
 для відео код:
 ```
+ <div class="video_product">
  <div class="video-youtube">
                     <a class="video__link" href="https://www.youtube.com/watch?v=2sdIzYBoTO4&ab_channel=Arzum">
                         <picture>
@@ -14,5 +15,6 @@
                             <path class="video__button-icon" d="M 45,24 27,14 27,34"></path>
                         </svg>
                     </button>
+                </div>
                 </div>
 ```
