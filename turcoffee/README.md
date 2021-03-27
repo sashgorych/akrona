@@ -1,6 +1,68 @@
 [Сторінка продукту](#Сторінка-продукту)
 [Залогінений юзер](#Авторизація)
 
+# Попап для корзини
+```
+    <div class="default_popup countErrorPopup">
+        <div class="popup_close">
+            <div class="icon-close"><span></span></div>
+        </div>
+        <div class="popup_content">
+            <p class="popup_title">Деяких товарів немає в наявності</p>
+            <div class="order_table">
+                <div class="order_row order_title_row pr__weight pr_colors">
+                    <div class="order_col order_name"><p>Назва</p></div>
+                    <div class="order_col order_w">
+                       <p>Вага</p>
+                    </div>
+                    <div class="order_col order_c">
+                        <p>Колір</p>
+                    </div>
+                    <div class="order_col order_count"><p>Замовлена к-сть</p></div>
+                    <div class="order_col order_price"><p>Наявна к-сть</p></div>
+                </div>
+
+                <div class="order_row pr__weight">
+                    <div class="order_col order_name"><p>Кава optimum</p></div>
+                    <div class="order_col order_w">
+                        <p>1 <span>кг</span></p>
+                        <span class="empty">—</span>
+                    </div>
+                    <div class="order_col order_c">
+                        <span class="product_color" title="Червоний" style="background: red"></span>
+                        <span class="empty">—</span>
+                    </div>
+                    <div class="order_col order_count"><p>1</p></div>
+                    <div class="order_col order_price"><p>0</p></div>
+                </div>
+                <div class="order_row pr__colors">
+                    <div class="order_col order_name"><p>Кава optimum</p></div>
+                    <div class="order_col order_w">
+                        <p>1 <span>кг</span></p>
+                        <span class="empty">—</span>
+                    </div>
+                    <div class="order_col order_c">
+                        <span class="product_color" title="Червоний" style="background: red"></span>
+                        <span class="empty">—</span>
+                    </div>
+                    <div class="order_col order_count"><p>1</p></div>
+                    <div class="order_col order_price"><p>0</p></div>
+                </div>
+
+            </div>
+            <div class="text_content">
+                <p>Деякий текст</p>
+            </div>
+            <div class="cart_bottom">
+                <button class="custom-button__white return_to_cart">Повернутися до кошика</button>
+                <button class="custom-button">Продовжити замовлення</button>
+
+            </div>
+
+        </div>
+    </div>
+
+```
 
 # Айтем продукту
 стандартний айтем 
