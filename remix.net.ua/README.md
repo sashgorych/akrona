@@ -32,3 +32,17 @@
 
 # Немає в наявності
 вставити ```<span class="no-items">Немає в наявності</span>``` в ```<td>``` над ```<a class="name"> ``` (де знаходиться назва товару)
+# Кнопка купити
+Замінити 
+```
+<input type="image" id="imageField2" src="/images/buy-button_ua.gif">
+```
+на
+```
+<div class="button_buy_container">
+  <div class="button_buy_btn">
+    <input type="image" id="imageField2" src="">
+    <span>Купити</span>
+  </div>
+</div>
+```
