@@ -102,6 +102,6 @@
 # Кнопка в хедері
 Вставити в ```div.logo-img-header```
 ```
-<button type="submit" class="custom_button open_try_form">Зробити тестове замовлення</button>
+<a class="custom_button open_try_form">Зробити тестове замовлення</a>
 
 ```
