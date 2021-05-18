@@ -56,7 +56,7 @@
   <div class="content">
     <div class="">
       <div class="center">
-          <p class="popup-title">Зроби пробне замовлення</p>
+          <p class="popup-title">Зробіть пробне замовлення</p>
         <form action="" id="" class="default_form">
           <div class="form-row">
             <div class="label">Ваше ім’я</div>
