@@ -1,0 +1,1365 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="copyright" content="">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <title></title>
+    <link rel="icon" href="./images/fav.png">
+    <link rel="stylesheet" href="./css/slick-lightbox.css">
+    <link rel="stylesheet" href="./css/main.css">
+    <!--<link rel="stylesheet" href="./css/critical.css">-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.min.css">
+    <link
+            rel="stylesheet"
+            href="https://unpkg.com/tippy.js@6/themes/light.css"
+    />
+    <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet"/>
+    <!--<link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">-->
+</head>
+<body class="">
+<div class="layout layout-menu-opened-overflow">
+    <div class="fixedHeader-margin"></div>
+
+    <section class="header">
+        <div class="header-top-line default-block">
+            <ul class="menu-info">
+                <li><a href="">Оплата и доставка</a></li>
+                <li><a href="">Система скидок</a></li>
+                <li><a href="">Вопросы и ответы</a></li>
+                <li>
+                    <a href="">Для партнеров <img src="./images/arrow-down.svg" alt="arrow"></a>
+                    <ul class="menu-info-submenu">
+                        <li><a href="">Сертификаты</a></li>
+                        <li><a href="">Дропшиппинг</a></li>
+                        <li><a href="">Презентации и каталоги</a></li>
+                        <li><a href="">О производстве</a></li>
+
+                    </ul>
+                </li>
+                <li><a href="/ru/about">Отзывы</a></li>
+                <li><a href="/ru/contacts">О компании</a></li>
+                <li><a href="/ru/contacts">Контакты</a></li>
+            </ul>
+            <div class="right">
+                <div class="language-block">
+                    <a href="" class="active">RU</a>
+                    <a href="">UA</a>
+                </div>
+                <div class="auth-block">
+                    <a href="" class="log-in">
+                        <span>Вход</span>
+                    <img src="./images/login-icon.svg" alt="">
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="header-middle default-block">
+            <div class="header-left">
+                <a href="/" class="logo">
+                    <img src="./images/logo.svg" alt="Leader">
+                    <p>Канцтовары оптом от производителя с доставкой по всей Украине
+                    </p>
+                </a>
+            </div>
+            <div class="header-center">
+                <div class="header-search">
+                    <form id="common-search-form" action="/" method="get">
+                        <div class="header-search-wrapper">
+                            <input type="search" autocomplete="off" class="form-control" resultto="quick-search-result"
+                                   placeholder="Искать продукты, категории..." id="searchstr" name="searchstr"
+                                   required="">
+                            <ul class="search-result quick-search-result" id="quick-search-result"></ul>
+
+                            <button class="btn" type="submit">
+                                <img src="./images/ic-actions-search.svg" alt="search">
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="header-right">
+                <div class="phones">
+                    <a href="tel:">(098) 226 01 89
+                    </a>
+                    <p>|</p>
+                    <a href="tel:">(050) 375 41 87</a>
+                </div>
+                <div class="works-time">
+                    <p><span>Пн. – пт.:</span> 08:00 - 17:00</p>
+                    <span class="spl">|</span>
+                    <p><span>Сб. - Вс.:</span> Выходные
+                    </p>
+                </div>
+            </div>
+            <div class="header-right-mobile">
+                <div class="search-icon header-right-mobile-item">
+                    <img src="./images/ic-actions-search.svg" alt="search">
+                </div>
+                <div class="mobile-cart header-right-mobile-item">
+                    <div class="cart-count">
+
+                    </div>
+                </div>
+                <div class="phone header-right-mobile-item">
+                    <img src="./images/phone.svg" alt="profile">
+                </div>
+                <div class="profile header-right-mobile-item">
+                    <img src="./images/profile.svg" alt="profile">
+                </div>
+                <div class="menu-toggle header-right-mobile-item">
+                    <div class="toggle-menu-info">
+                        <img src="./images/menu-icon.svg" alt="menu">
+
+                    </div>
+                    <div class="mobile-nav-menu">
+                        <div class="close-menu">
+                            <img src="./images/close.svg" alt="close">
+                        </div>
+                    </div>
+                    <div class="menu">
+                        <div class="language-block-menu">
+                            <div class="language-block">
+                                <a href="" class="active">RU</a>
+                                <a href="">UA</a>
+                            </div>
+                        </div>
+                        <div class="menu-auth">
+                            <a href="">Авторизация</a>
+                            <span>/</span>
+                            <a href="">Регистрация</a>
+                        </div>
+                        <div class="menu-info-phones">
+                            <div class="header-right">
+                                <div class="ph1">
+                                    <span>Контакты</span>
+                                    <div class="phones">
+                                        <a href="tel:">(098) 226 01 89
+                                        </a>
+                                        <p>|</p>
+                                        <a href="tel:">(050) 375 41 87</a>
+                                    </div>
+                                </div>
+                                <div class="ph1">
+                                    <span>Время работы</span>
+                                    <div class="works-time">
+                                        <p><span>Пн. – пт.:</span> 08:00 - 17:00</p>
+                                        <span class="spl">|</span>
+                                        <p><span>Сб. - Вс.:</span> Выходные
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="info-list-menu">
+                            <div class="ph1">
+                                <span>Информ страницы</span>
+                            </div>
+                            <ul class="">
+                                <li><a href="">Оплата и доставка</a></li>
+                                <li><a href="">Система скидок</a></li>
+                                <li><a href="">Вопросы и ответы</a></li>
+                                <li>
+                                    <a href="">Для партнеров <img src="./images/arrow-down.svg" alt="arrow"></a>
+                                    <ul class="menu-info-submenu">
+                                        <li><a href="">Сертификаты</a></li>
+                                        <li><a href="">Дропшиппинг</a></li>
+                                        <li><a href="">Презентации и каталоги</a></li>
+                                        <li><a href="">О производстве</a></li>
+
+                                    </ul>
+                                </li>
+                                <li><a href="/ru/about">Отзывы</a></li>
+                                <li><a href="/ru/contacts">О компании</a></li>
+                                <li><a href="/ru/contacts">Контакты</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+        <div class="header-bottom default-block">
+            <div class="catalog-li">
+                <a href="" class="toggleMenuBtn">
+                    <span class="img"><img src="./images/catalog-icon.svg" alt="menu"></span>
+                    <span>Каталог <span>товаров</span></span> </a>
+                <div class="mobile-nav mobile-item">
+                    <div class="navigation-mob">
+                        <div class="back">
+                            <img src="./images/arrow-down.svg" alt="arrow">
+                            <p class="nav-name"></p>
+
+                        </div>
+                    </div>
+                    <div class="close">
+                        <img src="./images/close.svg" alt="close">
+                    </div>
+                </div>
+                <ul class="main-menu">
+                    <li class="lvl1 mobile-item">
+                        <a href="" class="has_drop">Новое поступление</a>
+                        <div class="submenu">
+                            <div class="submenu-container">
+                                <div class="submenu-content">
+                                    <div class="card-wrap" style="">
+                                        <div class="content-right">
+                                            <div class="list-title">
+                                            </div>
+                                            <ul class="list-items">
+
+                                                <li>
+                                                    <a href="">22.05.2021</a>
+                                                </li>
+
+                                                <li>
+                                                    <a href="">22.05.2021</a>
+                                                </li>
+                                                <li>
+                                                    <a href="">22.05.2021</a>
+                                                </li>
+
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </li>
+                    <li class="lvl1 mobile-item">
+                        <a href="" class="has_drop">Производство</a>
+                        <div class="submenu">
+                            <div class="submenu-container">
+                                <div class="submenu-content">
+                                    <div class="card-wrap" style="">
+                                        <div class="content-right">
+                                            <div class="list-title">
+                                                <img class="" src="./images/header/menu/01kan/i1.svg">
+                                                <h2><a href="#">Бумажное производство</a></h2>
+                                            </div>
+                                            <ul class="list-items">
+
+                                                <li>
+                                                    <a href="/ru/wholesale-catalog/cvetnoy-karton" class="has_drop"
+                                                       title="Цветной картон">Цветной картон</a>
+                                                </li>
+
+                                                <li>
+                                                    <a href="/ru/wholesale-catalog/tetradi" class="has_drop"
+                                                       title="Тетради">Тетради</a>
+                                                </li>
+
+                                                <li>
+                                                    <a href="/ru/wholesale-catalog/cvetnaya-bumaga" class="has_drop"
+                                                       title="Цветная бумага">Цветная бумага</a>
+                                                </li>
+
+                                                <li>
+                                                    <a href="/ru/wholesale-catalog/albomy-dlya-risovaniya"
+                                                       class="has_drop" title="Альбомы для рисования">Альбомы для
+                                                        рисования</a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="card-wrap" style="">
+                                        <div class="content-right">
+                                            <div class="list-title">
+                                                <img class="" src="./images/header/menu/01kan/i6.svg">
+                                                <h2><a href="#">Пластиковое производство</a></h2>
+                                            </div>
+                                            <ul class="list-items">
+                                                <li>
+                                                    <a href="/ru/wholesale-catalog/stakany-neprolivayki"
+                                                       class="has_drop" title="Стаканы непроливайки">Стаканы
+                                                        непроливайки</a>
+                                                </li>
+
+                                                <li>
+                                                    <a href="/ru/wholesale-catalog/palitra-dlya-krasok" class="has_drop"
+                                                       title="Палитра для красок">Палитра для красок</a>
+                                                </li>
+
+                                                <li>
+                                                    <a href="/ru/wholesale-catalog/globusy" class="has_drop"
+                                                       title="Глобусы">Глобусы</a>
+                                                </li>
+
+                                                <li>
+                                                    <a href="/ru/wholesale-catalog/podstavki-dlya-knig" class="has_drop"
+                                                       title="Подставки для книг">Подставки для книг</a>
+                                                </li>
+
+                                                <li>
+                                                    <a href="/ru/wholesale-catalog/doski-dlya-plastelina"
+                                                       class="has_drop" title="Доски для пластелина">Доски для
+                                                        пластелина</a>
+                                                </li>
+
+                                                <li>
+                                                    <a href="/ru/wholesale-catalog/kleykaya-lenta-skotch"
+                                                       class="has_drop" title="Клейкая лента (скотч)">Клейкая лента
+                                                        (скотч)</a>
+                                                </li>
+
+                                                <li>
+                                                    <a href="/ru/wholesale-catalog/lineyki" class="has_drop"
+                                                       title="Линейки">Линейки</a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="card-wrap" style="">
+                                        <div class="content-right">
+                                            <div class="list-title">
+                                                <img class="" src="./images/header/menu/01kan/i4.svg">
+                                                <h2><a href="#">Текстильное производство</a></h2>
+                                            </div>
+                                            <ul class="list-items">
+                                                <li>
+                                                    <a href="/ru/wholesale-catalog/mladshaya-shkola-1-4-klass"
+                                                       class="has_drop" title="Младшая школа (1-4 класс)">Младшая школа
+                                                        (1-4 класс)</a>
+                                                </li>
+
+                                                <li>
+                                                    <a href="/ru/wholesale-catalog/srednyaya-shkola-5-8-klass"
+                                                       class="has_drop" title="Средняя школа (5-8 класс)">Средняя школа
+                                                        (5-8 класс)</a>
+                                                </li>
+
+                                                <li>
+                                                    <a href="/ru/wholesale-catalog/starshaya-shkola-9-11-klass"
+                                                       class="has_drop" title="Старшая школа (9-11 класс)">Старшая школа
+                                                        (9-11 класс)</a>
+                                                </li>
+
+                                                <li>
+                                                    <a href="/ru/wholesale-catalog/molodezhnye-ryukzaki"
+                                                       class="has_drop" title="Молодежные рюкзаки">Молодежные
+                                                        рюкзаки</a>
+                                                </li>
+
+                                                <li>
+                                                    <a href="/ru/wholesale-catalog/detskie-ryukzaki-doshkolnye"
+                                                       class="has_drop" title="Детские рюкзаки (дошкольные)">Детские
+                                                        рюкзаки (дошкольные)</a>
+                                                </li>
+
+                                                <li>
+                                                    <a href="/ru/wholesale-catalog/shkolnye-penaly" class="has_drop"
+                                                       title="Школьные пеналы">Школьные пеналы</a>
+                                                </li>
+
+                                                <li>
+                                                    <a href="/ru/wholesale-catalog/kosmetichki" class="has_drop"
+                                                       title="Косметички">Косметички</a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </li>
+                    <li class="lvl1 mobile-item">
+                        <a href="" class="has_drop">Акции</a>
+                        <div class="submenu">
+                            <div class="submenu-container">
+                                <div class="submenu-content">
+
+                                </div>
+                            </div>
+                        </div>
+
+                    </li>
+                    <li class="lvl1 mobile-item">
+                        <a href="" class="has_drop">Распродажа</a>
+                        <div class="submenu">
+                            <div class="submenu-container">
+                                <div class="submenu-content">
+
+                                </div>
+                            </div>
+                        </div>
+
+                    </li>
+                    <li class="lvl1">
+                        <a href="" class="has_drop">Канцтовары для школы</a>
+                        <div class="submenu">
+                            <div class="submenu-container">
+                                <div class="submenu-content">
+                                    <div class="card-wrap" style="">
+                                        <div class="content-right">
+                                            <div class="list-title">
+                                                <img class=""
+                                                     src="./images/header/menu/01kan/i1.svg">
+                                                <a href="/catalog/217981-dlya-tvorchestva">Бумажная
+                                                    продукция</a>
+                                            </div>
+                                            <ul class="list-items">
+                                                <li><a href="">Альбомы для рисования</a></li>
+                                                <li><a href="">Школьные дневники</a></li>
+                                                <li><a href="">Тетради</a></li>
+                                                <li><a href="">Цветная бумага</a></li>
+                                                <li><a href="" title="">Цветной картон</a></li>
+                                                <li><a href="" title="">Блокноты</a></li>
+                                                <li><a href="" title="">Раскраски</a></li>
+                                                <li><a href="" title="">Тетради-словари</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="card-wrap" style="">
+                                        <div class="content-right">
+                                            <div class="list-title">
+                                                <img class=""
+                                                     src="./images/header/menu/01kan/i6.svg">
+                                                <h2><a href="/catalog/217981-dlya-tvorchestva">Школьные
+                                                    принадлежности</a></h2>
+                                            </div>
+                                            <ul class="list-items">
+                                                <li><a href="">Глобусы</a></li>
+                                                <li><a href="">Клей</a></li>
+                                                <li><a href="">Ножницы</a></li>
+                                                <li><a href="">Обложки для книг и тетрадей</a></li>
+                                                <li><a href="">Школьные папки</a></li>
+                                                <li><a href="">Пластилин</a></li>
+                                                <li><a href="">Подставки для книг</a></li>
+                                                <li><a href="">Стаканы для кантоваров детские</a></li>
+                                                <li><a href="">Доски для пластелина</a></li>
+                                                <li><a href="">Портфели детские пластиковые</a></li>
+                                                <li><a href="">Посуда для еды и питья</a></li>
+                                                <li><a href="">Наклейки</a></li>
+                                                <li><a href="">Клейкая лента (скотч)</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="card-wrap" style="">
+                                        <div class="content-right">
+                                            <div class="list-title">
+                                                <img class=""
+                                                     src="./images/header/menu/01kan/i2.svg">
+                                                <h2><a href="">Письменные принадлежности</a></h2>
+                                            </div>
+                                            <ul class="list-items">
+                                                <li><a href="">Ручки шариковые</a></li>
+                                                <li><a href="">Ручки масленные</a></li>
+                                                <li><a href="">Ручки гелевые</a></li>
+                                                <li><a href="">Ручки чернильные</a></li>
+                                                <li><a href="">Наборы ручек</a></li>
+                                                <li><a href="">Стержни</a></li>
+                                                <li><a href="">Маркеры перманентные</a></li>
+                                                <li><a href="">Маркеры для досок</a></li>
+                                                <li><a href="">Маркеры текстовые</a></li>
+                                                <li><a href="">Корректоры</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="card-wrap" style="">
+                                        <div class="content-right">
+                                            <div class="list-title">
+                                                <img class=""
+                                                     src="./images/header/menu/01kan/i5.svg">
+                                                <h2><a href="">Чертежные принадлежности</a></h2>
+                                            </div>
+                                            <ul class="list-items">
+                                                <li><a href="">Готовальни</a></li>
+                                                <li><a href="">Карандаши черно-графитные</a></li>
+                                                <li><a href="">Карандаши механические</a></li>
+                                                <li><a href="">Линейки. Транспортиры. Треугольники</a></li>
+                                                <li><a href="">Бумага для черчений (ватман)</a></li>
+                                                <li><a href="">Папки для черчения</a></li>
+                                                <li><a href="">Тубусы для черчения</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="card-wrap" style="">
+                                        <div class="content-right">
+                                            <div class="list-title">
+                                                <img class=""
+                                                     src="./images/header/menu/01kan/i3.svg">
+                                                <h2><a href="">Рисование</a></h2>
+                                            </div>
+                                            <ul class="list-items">
+                                                <li><a href="">Карандаши черно-графитные</a></li>
+                                                <li><a href="">Карандаши цветные</a></li>
+                                                <li><a href="">Фломастеры</a></li>
+                                                <li><a href="">Краски акварельные</a></li>
+                                                <li><a href="">Краски гуашевые</a></li>
+                                                <li><a href="">Кисти</a></li>
+                                                <li><a href="">Мел</a></li>
+                                                <li><a href="">Стаканы непроливайки</a></li>
+                                                <li><a href="">Палитра для красок</a></li>
+                                                <li><a href="">Раскраски</a></li>
+                                                <li><a href="">Доски для рисования</a></li>
+                                                <li><a href="">Глиттер (блёстки)</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="card-wrap" style="">
+                                        <div class="content-right">
+                                            <div class="list-title">
+                                                <img class=""
+                                                     src="./images/header/menu/01kan/i4.svg">
+                                                <h2><a href="">Школьные рюкзаки и ранцы</a></h2>
+                                            </div>
+                                            <ul class="list-items">
+                                                <li><a href="">Дошкольные рюкзаки</a></li>
+                                                <li><a href="">Младшая школа (1-4класс)</a></li>
+                                                <li><a href="">Старшая школа</a></li>
+                                                <li><a href="">Молодежные рюкзаки</a></li>
+                                                <li><a href="">Сумки для обуви</a></li>
+                                                <li><a href="">Пеналы и косметички для школы</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="lvl1">
+                        <a href="" class="has_drop">Канцтовары для офиса</a>
+                        <div class="submenu">
+                            <div class="submenu-container">
+                                <div class="submenu-content">
+                                    <div class="card-wrap" style="">
+                                        <div class="content-right">
+                                            <div class="list-title">
+                                                <img class=""
+                                                     src="./images/header/menu/01kan/i1.svg">
+                                                <h2><a href="/catalog/217981-dlya-tvorchestva">Бумажная
+                                                    продукция</a></h2>
+                                            </div>
+                                            <ul class="list-items">
+                                                <li><a href="">Альбомы для рисования</a></li>
+                                                <li><a href="">Школьные дневники</a></li>
+                                                <li><a href="">Тетради</a></li>
+                                                <li><a href="">Цветная бумага</a></li>
+                                                <li><a href="" title="">Цветной картон</a></li>
+                                                <li><a href="" title="">Блокноты</a></li>
+                                                <li><a href="" title="">Раскраски</a></li>
+                                                <li><a href="" title="">Тетради-словари</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="card-wrap" style="">
+                                        <div class="content-right">
+                                            <div class="list-title">
+                                                <img class=""
+                                                     src="./images/header/menu/02office/i3.svg">
+                                                <h2><a href="/catalog/217981-dlya-tvorchestva">Офисные папки</a></h2>
+                                            </div>
+                                            <ul class="list-items">
+                                                <li><a href="">Клипборды. Папки-планшеты</a></li>
+                                                <li><a href="">Папки-конверты</a></li>
+                                                <li><a href="">Папки-портфели</a></li>
+                                                <li><a href="">Сегрегаторы</a></li>
+                                                <li><a href="">Папки-скоросшиватели</a></li>
+                                                <li><a href="">Папки с файлами</a></li>
+                                                <li><a href="">Уголки</a></li>
+                                                <li><a href="">Файлы</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="card-wrap" style="">
+                                        <div class="content-right">
+                                            <div class="list-title">
+                                                <img class=""
+                                                     src="./images/header/menu/02office/i4.svg">
+                                                <h2><a href="">Офисные принадлежности</a></h2>
+                                            </div>
+                                            <ul class="list-items">
+                                                <li><a href="">Резинки для денег</a></li>
+                                                <li><a href="">Калькуляторы</a></li>
+                                                <li><a href="">Лотки для документов</a></li>
+                                                <li><a href="">Корзины для бумаги</a></li>
+                                                <li><a href="">Настольные наборы</a></li>
+                                                <li><a href="">Штемпельная краска</a></li>
+                                                <li><a href="">Штемпельные подушки</a></li>
+                                                <li><a href="">Доски.Флипчарты</a></li>
+                                                <li><a href="">Магниты</a></li>
+                                                <li><a href="">Губки</a></li>
+                                                <li><a href="">Фотоальбомы</a></li>
+                                                <li><a href="">Фоторамки</a></li>
+
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="card-wrap" style="">
+                                        <div class="content-right">
+                                            <div class="list-title">
+                                                <img class=""
+                                                     src="./images/header/menu/02office/i5.svg">
+                                                <h2><a href="">Чертежные принадлежности</a></h2>
+                                            </div>
+                                            <ul class="list-items">
+                                                <li><a href="">Ручки шариковые</a></li>
+                                                <li><a href="">Ручки масленные</a></li>
+                                                <li><a href="">Ручки гелевые</a></li>
+                                                <li><a href="">Ручки чернильные</a></li>
+                                                <li><a href="">Наборы ручек</a></li>
+                                                <li><a href="">Стержни</a></li>
+                                                <li><a href="">Маркеры перманентные</a></li>
+                                                <li class=""><a href="">Маркеры для досок</a></li>
+                                                <li class=""><a href="">Маркеры текстовые</a></li>
+                                                <li class=""><a href="">Корректоры</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="card-wrap" style="">
+                                        <div class="content-right">
+                                            <div class="list-title">
+                                                <img class=""
+                                                     src="images/header/menu/02office/i2.svg">
+                                                <h2><a href="">Офисные инструменты</a></h2>
+                                            </div>
+                                            <ul class="list-items">
+                                                <li><a href="">Точилки</a></li>
+                                                <li><a href="">Индексы</a></li>
+                                                <li><a href="">Бейджи</a></li>
+                                                <li><a href="">Резинки для денег</a></li>
+                                                <li><a href="">Биндеры</a></li>
+                                                <li><a href="">Дыроколы</a></li>
+                                                <li><a href="">Степлеры, антистеплеры</a></li>
+                                                <li><a href="">Клей</a></li>
+                                                <li><a href="">Клейкая лента (скотч)</a></li>
+                                                <li><a href="">Кнопки</a></li>
+                                                <li><a href="">Линейки</a></li>
+                                                <li><a href="">Лупы</a></li>
+                                                <li><a href="">Ножницы канцелярские</a></li>
+                                                <li><a href="">Скобы для степлера</a></li>
+                                                <li><a href="">Скрепки</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                        </div>
+                    </li>
+                    <li class="lvl1">
+                        <a href="">Праздничная продукция</a>
+                        <div class="submenu">
+                            <div class="submenu-container">
+                                <div class="submenu-content">
+                                    <div class="card-wrap" style="">
+                                        <div class="content-right">
+                                            <div class="list-title">
+                                                <img class="" src="images/header/menu/03party/i1.svg">
+                                                <h2><a href="">Праздничная упаковка</a></h2>
+                                            </div>
+                                            <ul class="list-items">
+                                                <li><a href="">Коробки для подарков</a></li>
+                                                <li><a href="">Пакеты подарочные</a></li>
+                                                <li><a href="">Ленты и пленки</a></li>
+
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="card-wrap" style="">
+                                        <div class="content-right">
+                                            <div class="list-title">
+                                                <img class=""
+                                                     src="images/header/menu/03party/i2.svg">
+                                                <h2><a href="">Праздничный декор</a></h2>
+                                            </div>
+                                            <ul class="list-items">
+                                                <li><a href="">Свечки</a></li>
+                                                <li><a href="">Хлопушки</a></li>
+                                                <li><a href="">Декор для праздников</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="card-wrap" style="">
+                                        <div class="content-right">
+                                            <div class="list-title">
+                                                <img class=""
+                                                     src="images/header/menu/03party/i3.svg">
+                                                <h2><a href="">Воздушные шары</a></h2>
+                                            </div>
+                                            <ul class="list-items">
+                                                <li><a href="">Воздушные шары фольгированные</a></li>
+                                                <li><a href="">Воздушные шары латексные</a></li>
+                                                <li><a href="">Наборы воздушных шаров</a></li>
+                                                <li><a href="">Держатели для воздушных шаров</a></li>
+
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="lvl1">
+                        <a href="">Товары для рисования и творчества</a>
+                        <div class="submenu">
+                            <div class="submenu-container">
+                                <div class="submenu-content">
+                                    <div class="card-wrap" style="">
+                                        <div class="content-right">
+                                            <div class="list-title">
+                                                <img class="" src="images/header/menu/04drow/i1.svg">
+                                                <h2><a href="">Альбомы для рисования</a></h2>
+                                            </div>
+                                            <ul class="list-items">
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="card-wrap" style="">
+                                        <div class="content-right">
+                                            <div class="list-title">
+                                                <img class=""
+                                                     src="images/header/menu/04drow/i7.svg">
+                                                <h2><a href="">Пластилин</a></h2>
+                                            </div>
+                                            <ul class="list-items">
+                                                <li><a href="">Пластилин обычный</a></li>
+                                                <li><a href="">Кинетический песок</a></li>
+                                                <li><a href="">Пластилиновая поста</a></li>
+                                                <li><a href="">Полимерная глина</a></li>
+                                                <li><a href="">Пластилин "суперлегкий"</a></li>
+                                                <li><a href="">Наборы для лепки</a></li>
+                                                <li><a href="">Доски для пластилина</a></li>
+
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="card-wrap" style="">
+                                        <div class="content-right">
+                                            <div class="list-title">
+                                                <img class=""
+                                                     src="images/header/menu/04drow/i4.svg">
+                                                <h2><a href="">Кисти художественные</a></h2>
+                                            </div>
+                                            <ul class="list-items">
+                                                <li><a href="">Кисти "Пони"</a></li>
+                                                <li><a href="">Кисти "Белка"</a></li>
+                                                <li><a href="">Кисти "Щетина"</a></li>
+                                                <li><a href="">Кисти "Коза"</a></li>
+                                                <li><a href="">Кисти "Синтетические"</a></li>
+                                                <li><a href="">Наборы кистей</a></li>
+                                                <li><a href="">Другие кисти</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="card-wrap" style="">
+                                        <div class="content-right">
+                                            <div class="list-title">
+                                                <img class="" src="images/header/menu/04drow/i8.svg">
+                                                <h2><a href="">Раскраски</a></h2>
+                                            </div>
+                                            <ul class="list-items">
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="card-wrap" style="">
+                                        <div class="content-right">
+                                            <div class="list-title">
+                                                <img class=""
+                                                     src="images/header/menu/04drow/i5.svg">
+                                                <h2><a href="">Краски для рисования</a></h2>
+                                            </div>
+                                            <ul class="list-items">
+                                                <li><a href="">Акварельные краски</a></li>
+                                                <li><a href="">Акриловые краски</a></li>
+                                                <li><a href="">Гуашевые краски</a></li>
+                                                <li><a href="">Масляные краски</a></li>
+                                                <li><a href="">Темперные краски</a></li>
+                                                <li><a href="">Краски для лица</a></li>
+                                                <li><a href="">Другие краски</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="card-wrap" style="">
+                                        <div class="content-right">
+                                            <div class="list-title">
+                                                <img class=""
+                                                     src="images/header/menu/04drow/i3.svg">
+                                                <h2><a href="">Карандаши</a></h2>
+                                            </div>
+                                            <ul class="list-items">
+                                                <li><a href="">Карандаши цветные</a></li>
+                                                <li><a href="">Карандаши восковые</a></li>
+                                                <li><a href="">Карандаши акварельные</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="card-wrap" style="">
+                                        <div class="content-right">
+                                            <div class="list-title">
+                                                <img class="" src="images/header/menu/04drow/i6.svg">
+                                                <h2><a href="">Мел</a></h2>
+                                            </div>
+                                            <ul class="list-items">
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="card-wrap" style="">
+                                        <div class="content-right">
+                                            <div class="list-title">
+                                                <img class=""
+                                                     src="images/header/menu/04drow/i9.svg">
+                                                <h2><a href="">Фломастеры</a></h2>
+                                            </div>
+                                            <ul class="list-items">
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="card-wrap" style="">
+                                        <div class="content-right">
+                                            <div class="list-title">
+                                                <img class=""
+                                                     src="images/header/menu/04drow/i2.svg">
+                                                <h2><a href="">Наборы для творчества</a></h2>
+                                            </div>
+                                            <ul class="list-items">
+                                                <li><a href="">Непроливайки</a></li>
+                                                <li><a href="">Палитры</a></li>
+                                                <li><a href="">Трафареты</a></li>
+                                                <li><a href="">Наклейки</a></li>
+                                                <li><a href="">Браслеты, резинки для браслетов</a></li>
+                                                <li><a href="">Квилинг</a></li>
+                                                <li><a href="">Цветная бумага</a></li>
+                                                <li><a href="">Цветной картон</a></li>
+                                                <li><a href="">Доски.Мольберты</a></li>
+                                                <li><a href="">Холсты</a></li>
+                                                <li><a href="">Линеры</a></li>
+                                                <li><a href="">Скетчбуки</a></li>
+                                                <li><a href="">Наборы для творчества</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="card-wrap" style="">
+                                        <div class="content-right">
+                                            <div class="list-title">
+                                                <img class="" src="images/header/menu/04drow/i6.svg">
+                                                <h2><a href="">Резинки</a></h2>
+                                            </div>
+                                            <ul class="list-items">
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="lvl1">
+                        <a href="">Рюкзаки, сумки и аксессуары</a>
+                        <div class="submenu">
+                            <div class="submenu-container">
+                                <div class="submenu-content">
+                                    <div class="card-wrap" style="">
+                                        <div class="content-right">
+                                            <div class="list-title">
+                                                <img class=""
+                                                     src="images/header/menu/05backpack/i3.svg">
+                                                <h2><a href="">Школьные рюкзаки и ранцы</a></h2>
+                                            </div>
+                                            <ul class="list-items">
+                                                <li><a href="">Младшая школа (1-4 класс)</a></li>
+                                                <li><a href="">Средняя школа (5-8 класс)</a></li>
+                                                <li><a href="">Старшая школа (9-11 класс)</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="card-wrap" style="">
+                                        <div class="content-right">
+                                            <div class="list-title">
+                                                <img class=""
+                                                     src="images/header/menu/05backpack/i3.svg">
+                                                <h2><a href="">Молодежные рюкзаки</a></h2>
+                                            </div>
+                                            <ul class="list-items">
+                                                <li><a href="">Городские</a></li>
+                                                <li><a href="">Спортивные</a></li>
+                                                <li><a href="">Модные</a></li>
+                                                <li><a href="">Женские рюкзаки</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="card-wrap" style="">
+                                        <div class="content-right">
+                                            <div class="list-title">
+                                                <img class=""
+                                                     src="images/header/menu/05backpack/i3.svg">
+                                                <h2><a href="">Детские рюкзаки (дошкольные)</a></h2>
+                                            </div>
+                                            <ul class="list-items">
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="card-wrap" style="">
+                                        <div class="content-right">
+                                            <div class="list-title">
+                                                <img class=""
+                                                     src="images/header/menu/05backpack/i4.svg">
+                                                <h2><a href="">Сумки</a></h2>
+                                            </div>
+                                            <ul class="list-items">
+                                                <li><a href="">Сумки для обуви</a></li>
+                                                <li><a href="">Сумки для ноутбуков</a></li>
+                                                <li><a href="">Сумки из кожи и экокожи</a></li>
+                                                <li><a href="">Сумки спортивные</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="card-wrap" style="">
+                                        <div class="content-right">
+                                            <div class="list-title">
+                                                <img class=""
+                                                     src="images/header/menu/05backpack/i1.svg">
+                                                <h2><a href="">Аксессуары и рюкзаками</a></h2>
+                                            </div>
+                                            <ul class="list-items">
+                                                <li><a href="">Кошельки</a></li>
+                                                <li><a href="">Брелки и значки</a></li>
+                                                <li><a href="">Бутылки для воды</a></li>
+                                                <li><a href="">Термосы</a></li>
+                                                <li><a href="">Ланчбоксы</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="card-wrap" style="">
+                                        <div class="content-right">
+                                            <div class="list-title">
+                                                <img class=""
+                                                     src="images/header/menu/05backpack/i2.svg">
+                                                <h2><a href="">Пеналы и кометички</a></h2>
+                                            </div>
+                                            <ul class="list-items">
+                                                <li><a href="">Школьные пеналы</a></li>
+                                                <li><a href="">Косметички</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="lvl1">
+                        <a href="">Игрушки</a>
+                        <div class="submenu">
+                            <div class="submenu-container">
+                                <div class="submenu-content">
+                                    <div class="card-wrap" style="">
+                                        <div class="content-right">
+                                            <div class="list-title">
+                                                <img class=""
+                                                     src="images/header/menu/06toy/i8.svg">
+                                                <h2><a href="">Мягкие игрушки</a></h2>
+                                            </div>
+                                            <ul class="list-items">
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="card-wrap" style="">
+                                        <div class="content-right">
+                                            <div class="list-title">
+                                                <img class=""
+                                                     src="images/header/menu/06toy/i3.svg">
+                                                <h2><a href="">Игрушки для малышей</a></h2>
+                                            </div>
+                                            <ul class="list-items">
+                                                <li><a href="">Погремушки</a></li>
+                                                <li><a href="">Игрушки для купания</a></li>
+                                                <li><a href="">Зубогрызки</a></li>
+                                                <li><a href="">Подвески для кроваток и колясок</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="card-wrap" style="">
+                                        <div class="content-right">
+                                            <div class="list-title">
+                                                <img class=""
+                                                     src="images/header/menu/06toy/i2.svg">
+                                                <h2><a href="">Другие игрушки и игровые наборы</a></h2>
+                                            </div>
+                                            <ul class="list-items">
+                                                <li><a href="">Игрушки антистресс</a></li>
+                                                <li><a href="">Попрыгунчики</a></li>
+                                                <li><a href="">Слаймы</a></li>
+                                                <li><a href="">Фигурки</a></li>
+                                                <li><a href="">Игровые наборы</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="card-wrap" style="">
+                                        <div class="content-right">
+                                            <div class="list-title">
+                                                <img class=""
+                                                     src="images/header/menu/06toy/i4.svg">
+                                                <h2><a href="">Игры</a></h2>
+                                            </div>
+                                            <ul class="list-items">
+                                                <li><a href="">Развивающие игры</a></li>
+                                                <li><a href="">Настольные игры</a></li>
+                                                <li><a href="">Обучающие игры</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="card-wrap" style="">
+                                        <div class="content-right">
+                                            <div class="list-title">
+                                                <img class=""
+                                                     src="images/header/menu/06toy/i6.svg">
+                                                <h2><a href="">Куклы</a></h2>
+                                            </div>
+                                            <ul class="list-items">
+                                                <li><a href="">Пупсы</a></li>
+                                                <li><a href="">Куклы</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="card-wrap" style="">
+                                        <div class="content-right">
+                                            <div class="list-title">
+                                                <img class=""
+                                                     src="images/header/menu/06toy/i1.svg">
+                                                <h2><a href="">Аксессуары для кукол</a></h2>
+                                            </div>
+                                            <ul class="list-items">
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="card-wrap" style="">
+                                        <div class="content-right">
+                                            <div class="list-title">
+                                                <img class=""
+                                                     src="images/header/menu/06toy/i7.svg">
+                                                <h2><a href="">Машинки</a></h2>
+                                            </div>
+                                            <ul class="list-items">
+                                                <li><a href="">Машинки метпллические</a></li>
+                                                <li><a href="">Машинки пластиковые</a></li>
+                                                <li><a href="">Машинки на радиоуправлении</a></li>
+                                                <li><a href="">Наборы машинок</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="card-wrap" style="">
+                                        <div class="content-right">
+                                            <div class="list-title">
+                                                <img class=""
+                                                     src="images/header/menu/06toy/i9.svg">
+                                                <h2><a href="">Роботы и трансформеры</a></h2>
+                                            </div>
+                                            <ul class="list-items">
+
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="card-wrap" style="">
+                                        <div class="content-right">
+                                            <div class="list-title">
+                                                <img class=""
+                                                     src="images/header/menu/06toy/i5.svg">
+                                                <h2><a href="">Конструкторы</a></h2>
+                                            </div>
+                                            <ul class="list-items">
+                                                <li><a href="">Пазлы</a></li>
+                                                <li><a href="">Треки</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="lvl1">
+                        <a href="">Весь каталог товаров</a>
+                        <div class="submenu">
+                            <div class="submenu-container">
+                                <div class="submenu-content">
+                                    <div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="lvl1">
+                        <a href="">Скачать прайсы</a>
+                        <div class="submenu">
+                            <div class="submenu-container">
+                                <div class="submenu-content">
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+
+                </ul>
+            </div>
+            <nav>
+                <ul>
+                    <li>
+                        <a href="">Новое поступление</a>
+                        <div class="nav-submenu">
+                            <div class="submenu-container">
+                                <div class="top-manuf">
+                                    <div class="submenu-content">
+                                        <div class="card-wrap" style="">
+                                            <div class="content-right">
+                                                <div class="list-title">
+                                                    <img class="" src="">
+                                                    <h2><a href="#">Новые поступление</a></h2>
+                                                </div>
+                                                <ul class="list-items">
+
+                                                    <li>
+                                                        <a href="" class=""
+                                                           title=" "> 22.05.2021</a>
+                                                    </li>
+
+                                                    <li>
+                                                        <a href="" class=""
+                                                           title=" "> 22.05.2021</a>
+                                                    </li>
+
+                                                    <li>
+                                                        <a href="" class=""
+                                                           title=" "> 22.05.2021</a>
+                                                    </li>
+
+                                                    <li>
+                                                        <a href="" class=""
+                                                           title=" "> 22.05.2021</a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                    <div class="imgs">
+                                        <img src="./images/header/menu/manufacture/img1.png" alt="Текстиль">
+                                        <img src="./images/header/menu/manufacture/img2.png" alt="Бумага" 1="">
+                                        <img src="./images/header/menu/manufacture/img3.png" alt="Пластмасса">
+                                    </div>
+                                </div>
+                                <div class="content-text default-text">
+                                    <div class="top2">
+                                        <p class="title">А теперь вы узнаете, почему вам стоит сделать заказ прямо сейчас:
+                                        </p>
+                                        <p>
+                                            Наша компания Лидер-трейдинг выпускает продукцию европейского качества,
+                                            как для украинского так и европейского потребителя, при этом мы используем
+                                            передовые производственные технологии, стандарты и методы управления.
+                                        </p>
+                                        <p>Наше производство состоит из трех производственных модулей:
+                                        </p>
+                                        <ul>
+                                            <li>Фабрика по производству текстильной продукции (рюкзаков, ранцев, сумок для обуви, пеналов)
+                                            </li>
+                                            <li> Фабрика по производству изделий из бумаги (тетради, альбомы, т.д.) </li>
+                                            <li>Фабрика по производству изделий из пластмассы (глобусы, стаканы, палитра, доски для пластилина, клейкая лента и т.д.)</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </li>
+                    <li>
+                        <a href="">Производство</a>
+                        <div class="nav-submenu">
+                            <div class="submenu-container">
+                                <div class="top-manuf">
+                                <div class="submenu-content">
+                                    <div class="card-wrap" style="">
+                                        <div class="content-right">
+                                            <div class="list-title">
+                                                <img class="" src="./images/header/menu/01kan/i1.svg">
+                                                <h2><a href="#">Бумажное производство</a></h2>
+                                            </div>
+                                            <ul class="list-items">
+
+                                                <li>
+                                                    <a href="/ru/wholesale-catalog/cvetnoy-karton" class="has_drop"
+                                                       title="Цветной картон">Цветной картон</a>
+                                                </li>
+
+                                                <li>
+                                                    <a href="/ru/wholesale-catalog/tetradi" class="has_drop"
+                                                       title="Тетради">Тетради</a>
+                                                </li>
+
+                                                <li>
+                                                    <a href="/ru/wholesale-catalog/cvetnaya-bumaga" class="has_drop"
+                                                       title="Цветная бумага">Цветная бумага</a>
+                                                </li>
+
+                                                <li>
+                                                    <a href="/ru/wholesale-catalog/albomy-dlya-risovaniya"
+                                                       class="has_drop" title="Альбомы для рисования">Альбомы для
+                                                        рисования</a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="card-wrap" style="">
+                                        <div class="content-right">
+                                            <div class="list-title">
+                                                <img class="" src="./images/header/menu/01kan/i6.svg">
+                                                <h2><a href="#">Пластиковое производство</a></h2>
+                                            </div>
+                                            <ul class="list-items">
+                                                <li>
+                                                    <a href="/ru/wholesale-catalog/stakany-neprolivayki"
+                                                       class="has_drop" title="Стаканы непроливайки">Стаканы
+                                                        непроливайки</a>
+                                                </li>
+
+                                                <li>
+                                                    <a href="/ru/wholesale-catalog/palitra-dlya-krasok" class="has_drop"
+                                                       title="Палитра для красок">Палитра для красок</a>
+                                                </li>
+
+                                                <li>
+                                                    <a href="/ru/wholesale-catalog/globusy" class="has_drop"
+                                                       title="Глобусы">Глобусы</a>
+                                                </li>
+
+                                                <li>
+                                                    <a href="/ru/wholesale-catalog/podstavki-dlya-knig" class="has_drop"
+                                                       title="Подставки для книг">Подставки для книг</a>
+                                                </li>
+
+                                                <li>
+                                                    <a href="/ru/wholesale-catalog/doski-dlya-plastelina"
+                                                       class="has_drop" title="Доски для пластелина">Доски для
+                                                        пластелина</a>
+                                                </li>
+
+                                                <li>
+                                                    <a href="/ru/wholesale-catalog/kleykaya-lenta-skotch"
+                                                       class="has_drop" title="Клейкая лента (скотч)">Клейкая лента
+                                                        (скотч)</a>
+                                                </li>
+
+                                                <li>
+                                                    <a href="/ru/wholesale-catalog/lineyki" class="has_drop"
+                                                       title="Линейки">Линейки</a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="card-wrap" style="">
+                                        <div class="content-right">
+                                            <div class="list-title">
+                                                <img class="" src="./images/header/menu/01kan/i4.svg">
+                                                <h2><a href="#">Текстильное производство</a></h2>
+                                            </div>
+                                            <ul class="list-items">
+                                                <li>
+                                                    <a href="/ru/wholesale-catalog/mladshaya-shkola-1-4-klass"
+                                                       class="has_drop" title="Младшая школа (1-4 класс)">Младшая школа
+                                                        (1-4 класс)</a>
+                                                </li>
+
+                                                <li>
+                                                    <a href="/ru/wholesale-catalog/srednyaya-shkola-5-8-klass"
+                                                       class="has_drop" title="Средняя школа (5-8 класс)">Средняя школа
+                                                        (5-8 класс)</a>
+                                                </li>
+
+                                                <li>
+                                                    <a href="/ru/wholesale-catalog/starshaya-shkola-9-11-klass"
+                                                       class="has_drop" title="Старшая школа (9-11 класс)">Старшая школа
+                                                        (9-11 класс)</a>
+                                                </li>
+
+                                                <li>
+                                                    <a href="/ru/wholesale-catalog/molodezhnye-ryukzaki"
+                                                       class="has_drop" title="Молодежные рюкзаки">Молодежные
+                                                        рюкзаки</a>
+                                                </li>
+
+                                                <li>
+                                                    <a href="/ru/wholesale-catalog/detskie-ryukzaki-doshkolnye"
+                                                       class="has_drop" title="Детские рюкзаки (дошкольные)">Детские
+                                                        рюкзаки (дошкольные)</a>
+                                                </li>
+
+                                                <li>
+                                                    <a href="/ru/wholesale-catalog/shkolnye-penaly" class="has_drop"
+                                                       title="Школьные пеналы">Школьные пеналы</a>
+                                                </li>
+
+                                                <li>
+                                                    <a href="/ru/wholesale-catalog/kosmetichki" class="has_drop"
+                                                       title="Косметички">Косметички</a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="imgs">
+                                    <img src="./images/header/menu/manufacture/img1.png" alt="Текстиль">
+                                    <img src="./images/header/menu/manufacture/img2.png" alt="Бумага" 1="">
+                                    <img src="./images/header/menu/manufacture/img3.png" alt="Пластмасса">
+                                </div>
+                                </div>
+                                <div class="content-text default-text">
+                                    <div class="top2">
+                                        <p class="title">А теперь вы узнаете, почему вам стоит сделать заказ прямо сейчас:
+                                        </p>
+                                        <p>
+                                            Наша компания Лидер-трейдинг выпускает продукцию европейского качества,
+                                            как для украинского так и европейского потребителя, при этом мы используем
+                                            передовые производственные технологии, стандарты и методы управления.
+                                        </p>
+                                        <p>Наше производство состоит из трех производственных модулей:
+                                        </p>
+                                        <ul>
+                                            <li>Фабрика по производству текстильной продукции (рюкзаков, ранцев, сумок для обуви, пеналов)
+                                            </li>
+                                            <li> Фабрика по производству изделий из бумаги (тетради, альбомы, т.д.) </li>
+                                            <li>Фабрика по производству изделий из пластмассы (глобусы, стаканы, палитра, доски для пластилина, клейкая лента и т.д.)</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li><a href="">Акции</a></li>
+                    <li><a href="">Распродажа</a></li>
+                </ul>
+            </nav>
+
+            <a href="" class="cart">
+                <div class="cart-count">
+                    <img src="./images/cart.svg" alt="cart">
+                    <span>10</span>
+                </div>
+                <div class="cart-sum">
+                    <p>100 000 руб.</p>
+                </div>
+            </a>
+        </div>
+    </section>
+    <div style="display: none" class="default_popup content_popup">
+        <div class="popup_close">
+            <div class="icon-close"><span></span></div>
+        </div>
+        <div class="popup_content">
+            <p class="popup_title">Підписка на розсилку</p>
+            <div class="text_content">
+                <p>деякий текст деякий текстдеякий текстдеякий текстдеякий текстдеякий текстдеякий текстдеякий
+                    текстдеякий текстдеякий текстдеякий текстдеякий текстдеякий текстдеякий текст</p>
+                <p>деякий текст деякий текстдеякий текстдеякий текстдеякий текстдеякий текстдеякий текстдеякий
+                    текстдеякий текстдеякий текстдеякий текстдеякий текстдеякий текстдеякий текст</p>
+                <p>деякий текст деякий текстдеякий текстдеякий текстдеякий текстдеякий текстдеякий текстдеякий
+                    текстдеякий текстдеякий текстдеякий текстдеякий текстдеякий текстдеякий текст</p>
+                <p>деякий текст деякий текстдеякий текстдеякий текстдеякий текстдеякий текстдеякий текстдеякий
+                    текстдеякий текстдеякий текстдеякий текстдеякий текстдеякий текстдеякий текст</p>
+            </div>
+        </div>
+    </div>
+    <div class="side-menu__bg"></div>
