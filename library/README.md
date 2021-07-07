@@ -28,3 +28,25 @@
 </div>
 
 ```
+3) в інпуті пошуку видалити value і вставити placeholder
+# footer
+1) зліва є 
+```
+<td width="336" valign="top" style="padding-top:69px;">Бібліотека Чернівці <br>
+© 2011 www.dobrabiblioteka.cv.ua</td>
+```
+сюди треба вставити цей код (на початок в <td> перед Бібліотека Чернівці)
+```
+
+<ul class="footer-soc-2">
+    <li class="pos">
+        <a href="" class="header-address flex-center-y">м. Чернівці<br>вул. Українська, 22</a>
+    </li>
+    <li class="fb">
+        <a href="https://www.facebook.com/MunicipalLibraryDobryanskoho/" class=""></a>
+    </li>
+    <li class="yt">
+        <a href="https://www.youtube.com/channel/UCudmTBA12ws4Lrx40kBbPQg/videos" class=""></a>
+    </li>
+</ul>
+```
