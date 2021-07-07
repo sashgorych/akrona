@@ -48,6 +48,13 @@
     </a>
 </div>
 ```
+# slider
+додати в слайдері в  ```<a>``` перед ```<img>```
+ ```
+ <div class="slider-info">
+    <p>Заголовок 1</p>
+</div>
+ ```
 # posts
 додати на початок в ```<div class="content-top2"> ``` код
 ```
