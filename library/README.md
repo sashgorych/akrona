@@ -48,6 +48,14 @@
     </a>
 </div>
 ```
+# posts
+додати на початок в ```<div class="content-top2"> ``` код
+```
+<div class="post-date">
+    <p>22.01.2021</p>
+</div>
+```
+
 # footer
 1) зліва є 
 ```
@@ -55,9 +63,9 @@
 © 2011 www.dobrabiblioteka.cv.ua</td>
 ```
 сюди треба вставити цей код (на початок в <td> перед Бібліотека Чернівці)
+ 
 ```
-
-<ul class="footer-soc-2">
+ <ul class="footer-soc-2">
     <li class="pos">
         <a href="https://goo.gl/maps/tvRJ2vsufcjeiYV87" class="header-address flex-center-y">м. Чернівці<br>вул. Українська, 22</a>
     </li>
@@ -69,3 +77,5 @@
     </li>
 </ul>
 ```
+
+ 
