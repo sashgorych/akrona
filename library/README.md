@@ -29,6 +29,25 @@
 
 ```
 3) в інпуті пошуку видалити value і вставити placeholder
+4) перемикання мов
+додати в кінець ```<div class="pull-right flex-space-b hidden-xs">```
+
+```
+<div class='header-language-change'>
+    <a href="http://dobrabiblioteka.cv.ua/ua" title="Українська">
+        <img src="/images/ua.gif" width="18" height="12" style="margin-right:3px;">
+    </a>
+    <a href="http://dobrabiblioteka.cv.ua/ru" title="Русский">
+        <img src="/images/ru.gif" width="18" height="12" style="margin-right:3px;">
+    </a>
+    <a href="http://dobrabiblioteka.cv.ua/en" title="English">
+        <img src="/images/en.gif" width="18" height="12" style="margin-right:3px;">
+    </a>
+    <a href="http://dobrabiblioteka.cv.ua/de" title="German">
+        <img src="/images/de.gif" width="18" height="12" style="margin-right:3px;">
+    </a>
+</div>
+```
 # footer
 1) зліва є 
 ```
