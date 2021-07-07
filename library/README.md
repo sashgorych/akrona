@@ -59,7 +59,7 @@
 
 <ul class="footer-soc-2">
     <li class="pos">
-        <a href="" class="header-address flex-center-y">м. Чернівці<br>вул. Українська, 22</a>
+        <a href="https://goo.gl/maps/tvRJ2vsufcjeiYV87" class="header-address flex-center-y">м. Чернівці<br>вул. Українська, 22</a>
     </li>
     <li class="fb">
         <a href="https://www.facebook.com/MunicipalLibraryDobryanskoho/" class=""></a>
